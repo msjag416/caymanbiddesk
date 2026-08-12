@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Who Can Audit Your AML Programme Under the New CIMA Rule | Cayman Bid Desk</title>
+<meta name="description" content="CIMA's guidance confirms an AMLCO, MLRO or DMLRO can't audit the programme they run, and sets an external audit requirement across audit cycles. What Cayman firms need documented before 18 September 2026.">
+<link rel="canonical" href="https://www.caymanbiddesk.com/cima-aml-audit-independence.html">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://www.caymanbiddesk.com/cima-aml-audit-independence.html">
+<meta property="og:title" content="Who Can Audit Your AML Programme Under the New CIMA Rule">
+<meta property="og:description" content="Independence requirements, audit frequency and what CIMA expects documented before 18 September 2026.">
+<meta property="og:image" content="https://www.caymanbiddesk.com/og-image.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Spectral:wght@400;500;600&family=Public+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --navy:#0B2233;
+  --hull:#103449;
+  --teal:#0E7C86;
+  --sea:#4E8FA8;
+  --grey:#E8EDF1;
+  --grey-2:#F5F8FA;
+  --paper:#FFFFFF;
+  --signal:#B5822C;
+  --line:rgba(11,34,51,.14);
+  --line-dark:rgba(255,255,255,.16);
+  --display:'Spectral',Georgia,serif;
+  --body:'Public Sans',system-ui,-apple-system,sans-serif;
+  --mono:'IBM Plex Mono',ui-monospace,monospace;
+  --wrap:1180px;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:120px}
+body{margin:0;font-family:var(--body);color:var(--navy);background:var(--paper);font-size:17px;line-height:1.65;-webkit-font-smoothing:antialiased}
+img{max-width:100%;display:block}
+a{color:var(--teal)}
+.wrap{max-width:var(--wrap);margin:0 auto;padding:0 28px}
+.eyebrow{font-family:var(--mono);font-size:.72rem;letter-spacing:.18em;text-transform:uppercase;color:var(--sea);margin:0 0 14px}
+h1,h2,h3{font-family:var(--display);font-weight:600;line-height:1.15;letter-spacing:-.01em;margin:0 0 18px}
+h2{font-size:clamp(1.7rem,3.4vw,2.5rem)}
+h3{font-size:1.28rem}
+p{margin:0 0 18px}
+section{padding:88px 0}
+:focus-visible{outline:3px solid var(--signal);outline-offset:3px}
+
+/* NAV */
+.nav{position:sticky;top:0;z-index:60;background:rgba(11,34,51,.97);backdrop-filter:blur(8px);border-bottom:1px solid var(--line-dark)}
+.nav-in{max-width:var(--wrap);margin:0 auto;padding:14px 28px;display:flex;align-items:center;gap:28px}
+.brand{font-family:var(--display);color:#fff;text-decoration:none;font-size:1.06rem;font-weight:600;line-height:1.2;letter-spacing:-.01em}
+.brand span{display:block;font-family:var(--mono);font-size:.6rem;letter-spacing:.2em;text-transform:uppercase;color:var(--sea);font-weight:400;margin-top:3px}
+.nav-links{display:flex;gap:22px;margin-left:auto;align-items:center}
+.nav-links a{color:rgba(255,255,255,.82);text-decoration:none;font-size:.87rem;font-weight:500}
+.nav-links a:hover{color:#fff}
+.btn{display:inline-block;padding:12px 22px;border-radius:2px;font-weight:600;font-size:.88rem;text-decoration:none;border:1px solid transparent;cursor:pointer;font-family:var(--body);transition:background .18s,color .18s}
+.btn-teal{background:var(--teal);color:#fff}
+.btn-teal:hover{background:#0a5f67}
+.btn-ghost{border-color:rgba(255,255,255,.4);color:#fff;background:transparent}
+.btn-ghost:hover{background:rgba(255,255,255,.1)}
+.btn-navy{background:var(--navy);color:#fff}
+.btn-navy:hover{background:var(--hull)}
+.btn-out{border-color:var(--navy);color:var(--navy);background:transparent}
+.btn-out:hover{background:var(--navy);color:#fff}
+.burger{display:none;margin-left:auto;background:none;border:1px solid var(--line-dark);color:#fff;padding:9px 12px;border-radius:2px;font-size:1rem;cursor:pointer}
+
+/* ALERT BAND */
+.alert{background:var(--hull);border-top:2px solid var(--signal);color:#fff}
+.alert-in{max-width:var(--wrap);margin:0 auto;padding:26px 28px;display:grid;grid-template-columns:1fr auto;gap:28px;align-items:center}
+.alert-tag{font-family:var(--mono);font-size:.68rem;letter-spacing:.2em;text-transform:uppercase;color:var(--signal);margin:0 0 10px}
+.alert h2{font-size:1.32rem;color:#fff;margin:0 0 10px;font-family:var(--body);font-weight:700;letter-spacing:0}
+.alert p{font-size:.93rem;color:rgba(255,255,255,.78);margin:0;max-width:70ch}
+.alert-act{display:flex;flex-direction:column;gap:10px;align-items:flex-start}
+.alert-act a.small{font-size:.82rem;color:var(--sea);text-decoration:underline}
+
+/* HERO */
+.hero{background:var(--navy);color:#fff;padding:96px 0 84px;position:relative;overflow:hidden}
+.hero:before{content:"";position:absolute;inset:0;background-image:linear-gradient(var(--line-dark) 1px,transparent 1px),linear-gradient(90deg,var(--line-dark) 1px,transparent 1px);background-size:76px 76px;opacity:.4}
+.hero:after{content:"";position:absolute;right:-16%;top:-30%;width:66%;height:150%;background:radial-gradient(closest-side,rgba(14,124,134,.4),transparent 72%)}
+.hero-in{position:relative;z-index:2;display:grid;grid-template-columns:1.05fr .95fr;gap:56px;align-items:center}
+.hero-fig{margin:0;position:relative}
+.hero-fig img{width:100%;height:auto;border:1px solid var(--line-dark)}
+.hero-fig:after{content:"";position:absolute;inset:0;background:linear-gradient(100deg,rgba(11,34,51,.34),transparent 46%);pointer-events:none}
+.hero h1{font-size:clamp(2.2rem,5.4vw,3.55rem);color:#fff;margin-bottom:22px}
+.hero p.lede{font-size:1.14rem;color:rgba(255,255,255,.82);max-width:64ch;margin-bottom:32px}
+.hero-btns{display:flex;gap:14px;flex-wrap:wrap}
+
+/* LEDGER (signature) */
+.ledger{background:var(--grey-2);border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:52px 0}
+.ledger-box{border:1px solid var(--line);background:#fff}
+.ledger-head{display:flex;justify-content:space-between;align-items:center;gap:16px;padding:14px 22px;border-bottom:1px solid var(--line);flex-wrap:wrap}
+.ledger-head span{font-family:var(--mono);font-size:.68rem;letter-spacing:.18em;text-transform:uppercase;color:var(--sea)}
+.clock{display:flex;flex-wrap:wrap;padding:26px 22px 8px;gap:0}
+.unit{padding:0 30px 18px 0;margin-right:30px;border-right:1px solid var(--line)}
+.unit:last-child{border-right:none}
+.unit b{display:block;font-family:var(--mono);font-size:clamp(2rem,5vw,3.1rem);font-weight:500;line-height:1;color:var(--navy);font-variant-numeric:tabular-nums}
+.unit i{display:block;font-family:var(--mono);font-style:normal;font-size:.66rem;letter-spacing:.2em;text-transform:uppercase;color:var(--sea);margin-top:9px}
+.track{padding:6px 22px 22px}
+.track-bar{height:5px;background:var(--grey);position:relative;overflow:hidden}
+.track-fill{position:absolute;left:0;top:0;bottom:0;background:var(--teal);width:0;transition:width 1.1s ease}
+.track-ends{display:flex;justify-content:space-between;font-family:var(--mono);font-size:.66rem;letter-spacing:.1em;text-transform:uppercase;color:var(--sea);margin-top:9px}
+.ledger-note{padding:16px 22px;border-top:1px solid var(--line);font-size:.86rem;color:#4a6377;margin:0}
+.in-effect{padding:34px 22px}
+.in-effect h3{margin-bottom:12px}
+
+/* DIVISIONS */
+.divisions{display:grid;grid-template-columns:1fr 1fr;gap:26px;margin-top:44px}
+.div-card{border:1px solid var(--line);padding:34px;background:#fff;display:flex;flex-direction:column}
+.div-card .eyebrow{color:var(--teal)}
+.div-list{list-style:none;padding:0;margin:0 0 26px}
+.div-list li{padding:9px 0 9px 22px;border-bottom:1px solid var(--line);font-size:.92rem;position:relative}
+.div-list li:before{content:"";position:absolute;left:0;top:18px;width:9px;height:1px;background:var(--teal)}
+.scope{font-size:.82rem;color:#4a6377;border-left:2px solid var(--signal);padding-left:14px;margin:0 0 24px}
+.div-card .btn{align-self:flex-start;margin-top:auto}
+
+/* PILLARS */
+.dark{background:var(--navy);color:#fff}
+.dark h2,.dark h3{color:#fff}
+.dark p{color:rgba(255,255,255,.78)}
+.pillars{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--line-dark);margin-top:44px;border:1px solid var(--line-dark)}
+.pillar{background:var(--navy);padding:28px}
+.pillar h3{font-size:1.05rem;margin-bottom:10px;font-family:var(--body);font-weight:700;letter-spacing:0}
+.pillar p{font-size:.89rem;margin:0}
+
+/* CHECKER */
+.checker{border:1px solid var(--line);background:#fff;margin-top:36px}
+.q{padding:22px;border-bottom:1px solid var(--line);display:grid;grid-template-columns:1fr auto;gap:20px;align-items:center}
+.q p{margin:0;font-size:.96rem;max-width:62ch}
+.q .num{font-family:var(--mono);font-size:.68rem;color:var(--sea);letter-spacing:.16em;display:block;margin-bottom:7px}
+.opts{display:flex;gap:8px}
+.opts button{font-family:var(--mono);font-size:.7rem;letter-spacing:.1em;text-transform:uppercase;padding:9px 13px;border:1px solid var(--line);background:#fff;color:var(--navy);cursor:pointer;border-radius:2px}
+.opts button:hover{border-color:var(--teal)}
+.opts button[aria-pressed="true"]{background:var(--navy);color:#fff;border-color:var(--navy)}
+.result{padding:26px 22px;background:var(--grey-2)}
+.result p{margin:0 0 16px;font-size:.96rem}
+.result .flag{font-family:var(--mono);font-size:.68rem;letter-spacing:.18em;text-transform:uppercase;color:var(--signal);margin-bottom:10px}
+
+/* TILES */
+.tiles{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line);border:1px solid var(--line);margin-top:36px}
+.tile{background:#fff;padding:22px;font-size:.93rem;font-weight:500}
+
+/* PROCESS */
+.flow{display:flex;flex-wrap:wrap;gap:10px;align-items:center;margin:32px 0 28px}
+.step{font-family:var(--mono);font-size:.72rem;letter-spacing:.1em;text-transform:uppercase;padding:11px 15px;border:1px solid var(--line-dark);color:#fff}
+.arrow{color:var(--sea)}
+
+/* FEEDS */
+.feed{display:grid;grid-template-columns:repeat(2,1fr);gap:20px;margin-top:36px}
+.card{border:1px solid var(--line);padding:22px;background:#fff}
+.card h3{font-size:1.06rem;margin-bottom:12px;font-family:var(--body);font-weight:700;letter-spacing:0}
+.meta{font-family:var(--mono);font-size:.7rem;letter-spacing:.08em;color:var(--sea);text-transform:uppercase;margin-bottom:12px}
+.badge{display:inline-block;font-family:var(--mono);font-size:.64rem;letter-spacing:.14em;text-transform:uppercase;padding:4px 9px;border:1px solid var(--signal);color:var(--signal);margin-bottom:12px}
+.rowdata{display:grid;grid-template-columns:auto 1fr;gap:6px 16px;font-size:.85rem;margin:0 0 14px;padding:0}
+.rowdata dt{font-family:var(--mono);font-size:.68rem;letter-spacing:.1em;text-transform:uppercase;color:var(--sea)}
+.rowdata dd{margin:0}
+.empty{border:1px dashed var(--line);padding:38px 24px;text-align:center;background:var(--grey-2);margin-top:36px}
+.empty .meta{margin-bottom:14px}
+.source{font-size:.82rem}
+.commentary{border-left:2px solid var(--teal);padding-left:14px;font-size:.86rem;color:#4a6377;margin:14px 0 0}
+
+/* FORM */
+.form-grid{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-top:32px}
+label{display:block;font-family:var(--mono);font-size:.68rem;letter-spacing:.14em;text-transform:uppercase;color:var(--sea);margin-bottom:7px}
+input,select,textarea{width:100%;padding:12px 13px;border:1px solid var(--line);border-radius:2px;font-family:var(--body);font-size:.95rem;background:#fff;color:var(--navy)}
+textarea{min-height:130px;resize:vertical}
+.full{grid-column:1/-1}
+.formnote{font-size:.82rem;color:#4a6377;margin-top:16px}
+.hp{position:absolute;left:-9999px}
+
+/* Direct contact strip */
+.reach{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line-dark);border:1px solid var(--line-dark);margin:32px 0 8px}
+.reach a{background:var(--navy);padding:22px;text-decoration:none;display:block;color:#fff}
+.reach a:hover{background:var(--hull)}
+.reach .k{font-family:var(--mono);font-size:.66rem;letter-spacing:.18em;text-transform:uppercase;color:var(--sea);display:block;margin-bottom:8px}
+.reach .v{font-size:1.02rem;font-weight:600;color:#fff;display:block;word-break:break-word}
+.reach .s{font-size:.8rem;color:rgba(255,255,255,.6);display:block;margin-top:5px}
+
+/* Sticky mobile action bar */
+.bar{display:none;position:fixed;left:0;right:0;bottom:0;z-index:70;background:var(--navy);border-top:1px solid var(--line-dark)}
+.bar a{flex:1;text-align:center;padding:14px 6px;color:#fff;text-decoration:none;font-size:.82rem;font-weight:600;font-family:var(--body);border-right:1px solid var(--line-dark)}
+.bar a:last-child{border-right:none;background:var(--teal)}
+.nav-call{font-family:var(--mono);font-size:.82rem!important;color:#fff!important;white-space:nowrap}
+
+/* FOOTER */
+footer{background:var(--navy);color:rgba(255,255,255,.72);padding:66px 0 34px;font-size:.9rem}
+.fgrid{display:grid;grid-template-columns:2fr 1fr 1fr;gap:40px}
+footer h4{font-family:var(--mono);font-size:.68rem;letter-spacing:.18em;text-transform:uppercase;color:#fff;margin:0 0 16px}
+footer ul{list-style:none;padding:0;margin:0}
+footer li{margin-bottom:9px}
+footer a{color:rgba(255,255,255,.72);text-decoration:none}
+footer a:hover{color:#fff}
+.disclaim{border-top:1px solid var(--line-dark);margin-top:44px;padding-top:26px;font-size:.82rem;line-height:1.7}
+.disclaim strong{color:#fff;display:block;margin-bottom:10px;font-weight:600}
+
+@media(max-width:940px){
+  .divisions,.feed,.form-grid,.fgrid,.hero-in{grid-template-columns:1fr}
+  .hero-fig{order:-1}
+  .pillars,.tiles{grid-template-columns:1fr 1fr}
+  .alert-in{grid-template-columns:1fr}
+  .nav-links{display:none;position:absolute;top:100%;left:0;right:0;background:var(--navy);flex-direction:column;align-items:flex-start;padding:20px 28px;gap:16px;border-bottom:1px solid var(--line-dark)}
+  .nav-links.open{display:flex}
+  .burger{display:block}
+  .q{grid-template-columns:1fr}
+  section{padding:64px 0}
+  .reach{grid-template-columns:1fr}
+  .bar{display:flex}
+  body{padding-bottom:54px}
+}
+@media(max-width:560px){
+  .pillars,.tiles{grid-template-columns:1fr}
+  .unit{padding-right:18px;margin-right:18px}
+}
+@media(prefers-reduced-motion:reduce){
+  *{transition:none!important;animation:none!important}
+  html{scroll-behavior:auto}
+}
+</style>
+<style>
+.article{max-width:760px;margin:0 auto;padding:0 28px}
+.article h2{font-size:clamp(1.4rem,2.8vw,1.9rem);margin-top:44px}
+.article p{font-size:1.04rem}
+.stamp{border:1px solid var(--line);padding:18px 20px;background:var(--grey-2);font-size:.86rem;margin:30px 0 40px}
+.stamp dl{display:grid;grid-template-columns:auto 1fr;gap:6px 18px;margin:0}
+.stamp dt{font-family:var(--mono);font-size:.66rem;letter-spacing:.14em;text-transform:uppercase;color:var(--sea)}
+.stamp dd{margin:0}
+.pull{border-left:2px solid var(--teal);padding-left:18px;margin:32px 0}
+.endnote{border-top:1px solid var(--line);margin-top:48px;padding-top:24px;font-size:.86rem;color:#4a6377}
+</style>
+</head>
+<body>
+
+<header class="nav">
+  <div class="nav-in">
+    <a class="brand" href="index.html">Cayman Bid &amp; Compliance Services<span>Cayman Bid Desk</span></a>
+    <button class="burger" id="burger" aria-expanded="false" aria-controls="navlinks">Menu</button>
+    <nav class="nav-links" id="navlinks">
+      <a href="index.html#compliance">Compliance</a>
+      <a href="index.html#bid">Bid &amp; Tender Services</a>
+      <a href="index.html#regulatory">Regulatory Updates</a>
+      <a href="index.html#about">About</a>
+      <a class="nav-call" href="tel:+13433015061">+1 (343) 301-5061</a>
+      <a class="btn btn-teal" href="index.html#contact">Request a Consultation</a>
+    </nav>
+  </div>
+</header>
+
+<section style="padding:64px 0 24px">
+  <div class="article">
+    <p class="eyebrow">Cayman regulatory watch · CIMA</p>
+    <h1 style="font-size:clamp(1.9rem,4.4vw,2.8rem);margin-bottom:20px">Who can audit your AML programme under the new CIMA rule</h1>
+    <p style="font-size:1.12rem;color:#4a6377">CIMA's guidance answers a question a number of Cayman firms have been getting wrong: the person who runs the compliance programme can't be the person who audits it, and outsourcing the role doesn't change that.</p>
+
+    <div class="stamp">
+      <dl>
+        <dt>Published</dt><dd>12 August 2026</dd>
+        <dt>Last reviewed</dt><dd>12 August 2026</dd>
+        <dt>Regulator</dt><dd>Cayman Islands Monetary Authority</dd>
+        <dt>Effective date</dt><dd>Friday, 18 September 2026</dd>
+        <dt>Applies to</dt><dd>CIMA registered and licensed financial services providers</dd>
+        <dt>Source</dt><dd><a href="https://www.cima.ky/aml-cft-faqs" target="_blank" rel="noopener">CIMA guidance FAQs</a> · <a href="https://www.cima.ky/upimages/regulatorymeasures/Rule-EffectiveComplianceProgrammeforMLTFPF_1784899845.pdf" target="_blank" rel="noopener">the rule (PDF)</a></dd>
+      </dl>
+    </div>
+
+    <h2>The independence question</h2>
+    <p>CIMA's guidance addresses whether an outsourced AMLCO, MLRO or DMLRO can carry out the independent AML audit. The answer is no. Those officers form part of the compliance programme itself, so they can't independently audit activities they're responsible for. The guidance is explicit that this applies whether the function sits with an employee or with an outsourced provider.</p>
+    <p>That matters because outsourcing these roles is ordinary in the Cayman Islands, particularly among funds and smaller regulated entities. A firm that engaged one provider for both its AMLCO function and its audit has an independence problem to resolve, and resolving it means finding a second party and documenting why that party is independent.</p>
+    <p>CIMA describes independence as freedom from actual or perceived conflicts of interest, with the auditor having no responsibility for the design, operation, management or oversight of the programme. Perceived is doing work in that sentence. A firm needs to be able to show the separation, not just assert it.</p>
+
+    <h2>Who is permitted to perform the audit</h2>
+    <p>The guidance names four categories: internal audit functions, external auditors, independent consultants, and other suitably qualified and competent independent parties. The common requirement across all four is independence from the AML function and from the activities under review.</p>
+    <p>There's also a requirement that at least one audit in every three independent audit cycles is external. CIMA explains the reasoning directly, which is to reduce familiarity risk, self-review risk and loss of objectivity over time. A firm using the same internal reviewer indefinitely won't meet that expectation.</p>
+
+    <h2>How often the audit has to happen</h2>
+    <p>The rule doesn't mandate an annual AML audit. Frequency, scope and depth are determined using a risk-based approach that accounts for the firm's size, complexity, business activities and exposure. CIMA gives an illustration rather than a schedule: a higher risk firm might reasonably audit every two years, with medium and lower risk firms at three and four years respectively.</p>
+    <p>Because there's no prescribed interval, the burden moves to documentation. A firm has to determine its own frequency and record the reasoning, tied to its documented risk assessment and the level of assurance it needs. An interval chosen without a written rationale behind it is difficult to defend during an inspection.</p>
+
+    <div class="pull">
+      <p style="margin:0">Where firms tend to be exposed isn't the audit itself. It's the absence of a written record explaining why the chosen frequency, scope and auditor were appropriate.</p>
+    </div>
+
+    <h2>Funds that outsource nearly everything</h2>
+    <p>A regulated investment fund still has to undertake an AML audit even where all or substantially all of its operations are outsourced. CIMA is direct that relying only on a service provider's internal audit, or on a population-based review, without obtaining sufficient evidence about the individual fund's compliance programme, doesn't give adequate assurance.</p>
+    <p>The expectation is evidence sufficient to conclude on the design and operating effectiveness of that specific fund's programme, taking in investor onboarding controls, ongoing due diligence, third party arrangements, internal reporting, training and record keeping. For fund structures with dozens of entities under one administrator, that's a documentation exercise worth scoping now rather than in September.</p>
+
+    <h2>Accountability doesn't transfer</h2>
+    <p>One theme runs through the whole of CIMA's guidance. An AMLCO may be personally liable where a compliance failure amounts to a breach of the regulations and is attributable to their own conduct, but the firm remains ultimately responsible for its compliance programme. Outsourcing a function moves the work, not the accountability.</p>
+    <p>The same holds for the governing body. CIMA expects oversight evidenced through governance records, meaning minutes, reports, documented decisions and tracked remediation actions. Boards that discuss AML matters without recording the discussion have nothing to produce when asked.</p>
+
+    <h2>What to have documented before 18 September</h2>
+    <p>Five things, and none of them require regulatory interpretation to assemble. A written record of who performs your audit and why that party is independent of your compliance programme. A documented audit frequency with the risk-based reasoning behind it. A record of when your last external audit occurred and when the next one falls due. For funds, evidence tied to the individual entity rather than to the service provider alone. And governance records showing the board received, reviewed and acted on compliance reporting.</p>
+    <p>Firms that already run mature programmes will find most of this exists in some form. The work is locating it, organising it and confirming nothing is missing before the date arrives.</p>
+
+    <div class="endnote">
+      <p><strong>Source information above is drawn from CIMA's published guidance FAQs and the rule itself, both linked at the top of this article.</strong> Commentary about documentation priorities represents the view of Cayman Bid &amp; Compliance Services.</p>
+      <p>This article is general information about a published regulatory measure. It isn't legal, regulatory or compliance advice, and it shouldn't be relied on in place of advice from appropriately qualified professional advisers. Cayman Bid &amp; Compliance Services is an independent business and is not affiliated with, endorsed by, or acting on behalf of the Cayman Islands Monetary Authority or the Cayman Islands Government.</p>
+    </div>
+
+    <p style="margin-top:36px"><a class="btn btn-navy" href="index.html#readiness">Check your implementation readiness</a></p>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="fgrid">
+      <div>
+        <h4>Cayman Bid &amp; Compliance Services</h4>
+        <p style="margin:0 0 16px">A business name of ProRN Inc.<br>Toronto, Ontario, Canada</p>
+        <p style="margin:0"><a href="tel:+13433015061">+1 (343) 301-5061</a><br>
+        <a data-mailto href="index.html#contact">Email us</a></p>
+      </div>
+      <div>
+        <h4>Services</h4>
+        <ul>
+          <li><a href="index.html#compliance">Compliance implementation</a></li>
+          <li><a href="index.html#bid">Bid and tender support</a></li>
+          <li><a href="index.html#procurement">Procurement Watch</a></li>
+          <li><a href="index.html#regulatory">Regulatory Watch</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Company</h4>
+        <ul>
+          <li><a href="index.html#about">About</a></li>
+          <li><a href="index.html#contact">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="disclaim">
+      <p style="margin:0">&copy; <span id="yr"></span> ProRN Inc. All rights reserved.</p>
+    </div>
+  </div>
+</footer>
+
+<div class="bar">
+  <a href="tel:+13433015061">Call</a>
+  <a href="https://wa.me/13433015061?text=Hi%2C%20I%27m%20enquiring%20about%20bid%20and%20compliance%20support%20for%20a%20Cayman%20deadline." target="_blank" rel="noopener">WhatsApp</a>
+  <a href="index.html#contact">Request review</a>
+</div>
+
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"NewsArticle",
+  "headline":"Who can audit your AML programme under the new CIMA rule",
+  "datePublished":"2026-08-12",
+  "dateModified":"2026-08-12",
+  "author":{"@type":"Organization","name":"Cayman Bid & Compliance Services"},
+  "publisher":{"@type":"Organization","name":"Cayman Bid & Compliance Services"},
+  "mainEntityOfPage":"https://www.caymanbiddesk.com/cima-aml-audit-independence.html",
+  "image":"https://www.caymanbiddesk.com/og-image.jpg"
+}
+</script>
+
+<script>
+document.getElementById('yr').textContent = new Date().getFullYear();
+var burger=document.getElementById('burger'), links=document.getElementById('navlinks');
+burger.addEventListener('click',function(){var o=links.classList.toggle('open');burger.setAttribute('aria-expanded',o);});
+var USER=['pro','rn','inc'].join(''), HOST=['gm','ail','.com'].join('');
+var ADDR=USER+String.fromCharCode(64)+HOST;
+document.querySelectorAll('[data-mailto]').forEach(function(a){a.setAttribute('href','mailto:'+ADDR);});
+</script>
+</body>
+</html>
