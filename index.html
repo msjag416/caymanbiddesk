@@ -15,6 +15,9 @@
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:image" content="https://www.caymanbiddesk.com/og-image.jpg">
 <meta name="robots" content="index, follow">
+<link rel="icon" href="favicon.ico" sizes="any">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Spectral:wght@400;500;600&family=Public+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
@@ -437,7 +440,7 @@ footer a:hover{color:#fff}
   <div class="wrap">
     <p class="eyebrow">Cayman procurement watch</p>
     <h2>Open opportunities</h2>
-    <p style="max-width:66ch">Verified public procurement notices from official Cayman sources, with closing dates and days remaining. Every entry links to the issuing authority.</p>
+    <p style="max-width:66ch">Where Cayman procurement is advertised, what the thresholds are, and which notices are open now. We list individual opportunities only when confirmed against the official source.</p>
     <div id="oppFeed"></div>
 
     <div style="border:1px solid var(--line);padding:26px;margin-top:26px;background:var(--grey-2)">
@@ -784,10 +787,16 @@ function renderOpps(){
   var host = document.getElementById('oppFeed');
   if (!OPPORTUNITIES.length){
     host.innerHTML =
-      '<div class="empty">' +
-      '<p class="meta">Monitoring in progress</p>' +
-      '<p style="margin:0 0 6px;font-weight:600">No verified opportunities are listed right now.</p>' +
-      '<p style="margin:0;font-size:.9rem;color:#4a6377">We only publish procurement notices confirmed against an official source. Join the list below and we will send matches for your sector as they are published.</p>' +
+      '<div class="empty" style="text-align:left">' +
+      '<p class="meta">Where Cayman opportunities are published</p>' +
+      '<p style="margin:0 0 14px;font-weight:600">No individual notices are listed here yet. Here is where to look in the meantime.</p>' +
+      '<p style="margin:0 0 14px;font-size:.92rem;color:#4a6377">The Cayman Islands Government runs a competitive bid process governed by the Procurement Act 2016, the Procurement Regulations 2018, the Freedom of Information Act and Central Procurement Office policy. Government is required to advertise electronically where the expected value of a purchase is KY$100,000 or greater, which means opportunities above that threshold appear on the official portal. Purchases below it may never be advertised publicly at all.</p>' +
+      '<p style="margin:0 0 18px;font-size:.92rem;color:#4a6377">Suppliers register once on the portal and then respond to individual notices there. Registration ahead of a deadline matters, because a first-time registration on the closing day is where submissions get lost.</p>' +
+      '<p style="margin:0 0 20px"><a href="https://cayman.bonfirehub.com/portal/?tab=openOpportunities" target="_blank" rel="noopener">Open opportunities, official CIG portal</a><br>' +
+      '<a href="https://cayman.bonfirehub.com/portal/?tab=pastOpportunities" target="_blank" rel="noopener">Past opportunities and awards</a><br>' +
+      '<a href="https://www.procure.gov.ky/bid-opportunities" target="_blank" rel="noopener">Central Procurement Office, bid opportunities</a><br>' +
+      '<a href="https://www.procure.gov.ky/procurement-plans" target="_blank" rel="noopener">Published procurement plans, what is coming next</a></p>' +
+      '<p style="margin:0;font-size:.86rem;color:#4a6377">We publish individual notices here only once confirmed against the official source. Join the list below and we will send matches for your sector.</p>' +
       '</div>';
     return;
   }
