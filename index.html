@@ -1,0 +1,798 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Cayman Bid &amp; Compliance Services | Tender Support &amp; CIMA Implementation</title>
+<meta name="description" content="Bid, tender and compliance implementation support for Cayman Islands businesses. Requirement mapping, documentation, procurement response coordination and deadline project capacity.">
+<link rel="canonical" href="https://www.caymanbiddesk.com/">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://www.caymanbiddesk.com/">
+<meta property="og:title" content="Cayman Bid &amp; Compliance Services">
+<meta property="og:description" content="Bid, tender and compliance implementation support for Cayman Islands businesses facing procurement requirements and fixed regulatory deadlines.">
+<meta property="og:site_name" content="Cayman Bid Desk">
+<meta property="og:image" content="https://www.caymanbiddesk.com/assets/og-image.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://www.caymanbiddesk.com/assets/og-image.jpg">
+<meta name="robots" content="index, follow">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Spectral:wght@400;500;600&family=Public+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --navy:#0B2233;
+  --hull:#103449;
+  --teal:#0E7C86;
+  --sea:#4E8FA8;
+  --grey:#E8EDF1;
+  --grey-2:#F5F8FA;
+  --paper:#FFFFFF;
+  --signal:#B5822C;
+  --line:rgba(11,34,51,.14);
+  --line-dark:rgba(255,255,255,.16);
+  --display:'Spectral',Georgia,serif;
+  --body:'Public Sans',system-ui,-apple-system,sans-serif;
+  --mono:'IBM Plex Mono',ui-monospace,monospace;
+  --wrap:1180px;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:120px}
+body{margin:0;font-family:var(--body);color:var(--navy);background:var(--paper);font-size:17px;line-height:1.65;-webkit-font-smoothing:antialiased}
+img{max-width:100%;display:block}
+a{color:var(--teal)}
+.wrap{max-width:var(--wrap);margin:0 auto;padding:0 28px}
+.eyebrow{font-family:var(--mono);font-size:.72rem;letter-spacing:.18em;text-transform:uppercase;color:var(--sea);margin:0 0 14px}
+h1,h2,h3{font-family:var(--display);font-weight:600;line-height:1.15;letter-spacing:-.01em;margin:0 0 18px}
+h2{font-size:clamp(1.7rem,3.4vw,2.5rem)}
+h3{font-size:1.28rem}
+p{margin:0 0 18px}
+section{padding:88px 0}
+:focus-visible{outline:3px solid var(--signal);outline-offset:3px}
+
+/* NAV */
+.nav{position:sticky;top:0;z-index:60;background:rgba(11,34,51,.97);backdrop-filter:blur(8px);border-bottom:1px solid var(--line-dark)}
+.nav-in{max-width:var(--wrap);margin:0 auto;padding:14px 28px;display:flex;align-items:center;gap:28px}
+.brand{font-family:var(--display);color:#fff;text-decoration:none;font-size:1.06rem;font-weight:600;line-height:1.2;letter-spacing:-.01em}
+.brand span{display:block;font-family:var(--mono);font-size:.6rem;letter-spacing:.2em;text-transform:uppercase;color:var(--sea);font-weight:400;margin-top:3px}
+.nav-links{display:flex;gap:22px;margin-left:auto;align-items:center}
+.nav-links a{color:rgba(255,255,255,.82);text-decoration:none;font-size:.87rem;font-weight:500}
+.nav-links a:hover{color:#fff}
+.btn{display:inline-block;padding:12px 22px;border-radius:2px;font-weight:600;font-size:.88rem;text-decoration:none;border:1px solid transparent;cursor:pointer;font-family:var(--body);transition:background .18s,color .18s}
+.btn-teal{background:var(--teal);color:#fff}
+.btn-teal:hover{background:#0a5f67}
+.btn-ghost{border-color:rgba(255,255,255,.4);color:#fff;background:transparent}
+.btn-ghost:hover{background:rgba(255,255,255,.1)}
+.btn-navy{background:var(--navy);color:#fff}
+.btn-navy:hover{background:var(--hull)}
+.btn-out{border-color:var(--navy);color:var(--navy);background:transparent}
+.btn-out:hover{background:var(--navy);color:#fff}
+.burger{display:none;margin-left:auto;background:none;border:1px solid var(--line-dark);color:#fff;padding:9px 12px;border-radius:2px;font-size:1rem;cursor:pointer}
+
+/* ALERT BAND */
+.alert{background:var(--hull);border-top:2px solid var(--signal);color:#fff}
+.alert-in{max-width:var(--wrap);margin:0 auto;padding:26px 28px;display:grid;grid-template-columns:1fr auto;gap:28px;align-items:center}
+.alert-tag{font-family:var(--mono);font-size:.68rem;letter-spacing:.2em;text-transform:uppercase;color:var(--signal);margin:0 0 10px}
+.alert h2{font-size:1.32rem;color:#fff;margin:0 0 10px;font-family:var(--body);font-weight:700;letter-spacing:0}
+.alert p{font-size:.93rem;color:rgba(255,255,255,.78);margin:0;max-width:70ch}
+.alert-act{display:flex;flex-direction:column;gap:10px;align-items:flex-start}
+.alert-act a.small{font-size:.82rem;color:var(--sea);text-decoration:underline}
+
+/* HERO */
+.hero{background:var(--navy);color:#fff;padding:96px 0 84px;position:relative;overflow:hidden}
+.hero:before{content:"";position:absolute;inset:0;background-image:linear-gradient(var(--line-dark) 1px,transparent 1px),linear-gradient(90deg,var(--line-dark) 1px,transparent 1px);background-size:76px 76px;opacity:.4}
+.hero:after{content:"";position:absolute;right:-16%;top:-30%;width:66%;height:150%;background:radial-gradient(closest-side,rgba(14,124,134,.4),transparent 72%)}
+.hero-in{position:relative;z-index:2;display:grid;grid-template-columns:1.05fr .95fr;gap:56px;align-items:center}
+.hero-fig{margin:0;position:relative}
+.hero-fig img{width:100%;height:auto;border:1px solid var(--line-dark)}
+.hero-fig:after{content:"";position:absolute;inset:0;background:linear-gradient(100deg,rgba(11,34,51,.34),transparent 46%);pointer-events:none}
+.hero h1{font-size:clamp(2.2rem,5.4vw,3.55rem);color:#fff;margin-bottom:22px}
+.hero p.lede{font-size:1.14rem;color:rgba(255,255,255,.82);max-width:64ch;margin-bottom:32px}
+.hero-btns{display:flex;gap:14px;flex-wrap:wrap}
+
+/* LEDGER (signature) */
+.ledger{background:var(--grey-2);border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:52px 0}
+.ledger-box{border:1px solid var(--line);background:#fff}
+.ledger-head{display:flex;justify-content:space-between;align-items:center;gap:16px;padding:14px 22px;border-bottom:1px solid var(--line);flex-wrap:wrap}
+.ledger-head span{font-family:var(--mono);font-size:.68rem;letter-spacing:.18em;text-transform:uppercase;color:var(--sea)}
+.clock{display:flex;flex-wrap:wrap;padding:26px 22px 8px;gap:0}
+.unit{padding:0 30px 18px 0;margin-right:30px;border-right:1px solid var(--line)}
+.unit:last-child{border-right:none}
+.unit b{display:block;font-family:var(--mono);font-size:clamp(2rem,5vw,3.1rem);font-weight:500;line-height:1;color:var(--navy);font-variant-numeric:tabular-nums}
+.unit i{display:block;font-family:var(--mono);font-style:normal;font-size:.66rem;letter-spacing:.2em;text-transform:uppercase;color:var(--sea);margin-top:9px}
+.track{padding:6px 22px 22px}
+.track-bar{height:5px;background:var(--grey);position:relative;overflow:hidden}
+.track-fill{position:absolute;left:0;top:0;bottom:0;background:var(--teal);width:0;transition:width 1.1s ease}
+.track-ends{display:flex;justify-content:space-between;font-family:var(--mono);font-size:.66rem;letter-spacing:.1em;text-transform:uppercase;color:var(--sea);margin-top:9px}
+.ledger-note{padding:16px 22px;border-top:1px solid var(--line);font-size:.86rem;color:#4a6377;margin:0}
+.in-effect{padding:34px 22px}
+.in-effect h3{margin-bottom:12px}
+
+/* DIVISIONS */
+.divisions{display:grid;grid-template-columns:1fr 1fr;gap:26px;margin-top:44px}
+.div-card{border:1px solid var(--line);padding:34px;background:#fff;display:flex;flex-direction:column}
+.div-card .eyebrow{color:var(--teal)}
+.div-list{list-style:none;padding:0;margin:0 0 26px}
+.div-list li{padding:9px 0 9px 22px;border-bottom:1px solid var(--line);font-size:.92rem;position:relative}
+.div-list li:before{content:"";position:absolute;left:0;top:18px;width:9px;height:1px;background:var(--teal)}
+.scope{font-size:.82rem;color:#4a6377;border-left:2px solid var(--signal);padding-left:14px;margin:0 0 24px}
+.div-card .btn{align-self:flex-start;margin-top:auto}
+
+/* PILLARS */
+.dark{background:var(--navy);color:#fff}
+.dark h2,.dark h3{color:#fff}
+.dark p{color:rgba(255,255,255,.78)}
+.pillars{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--line-dark);margin-top:44px;border:1px solid var(--line-dark)}
+.pillar{background:var(--navy);padding:28px}
+.pillar h3{font-size:1.05rem;margin-bottom:10px;font-family:var(--body);font-weight:700;letter-spacing:0}
+.pillar p{font-size:.89rem;margin:0}
+
+/* CHECKER */
+.checker{border:1px solid var(--line);background:#fff;margin-top:36px}
+.q{padding:22px;border-bottom:1px solid var(--line);display:grid;grid-template-columns:1fr auto;gap:20px;align-items:center}
+.q p{margin:0;font-size:.96rem;max-width:62ch}
+.q .num{font-family:var(--mono);font-size:.68rem;color:var(--sea);letter-spacing:.16em;display:block;margin-bottom:7px}
+.opts{display:flex;gap:8px}
+.opts button{font-family:var(--mono);font-size:.7rem;letter-spacing:.1em;text-transform:uppercase;padding:9px 13px;border:1px solid var(--line);background:#fff;color:var(--navy);cursor:pointer;border-radius:2px}
+.opts button:hover{border-color:var(--teal)}
+.opts button[aria-pressed="true"]{background:var(--navy);color:#fff;border-color:var(--navy)}
+.result{padding:26px 22px;background:var(--grey-2)}
+.result p{margin:0 0 16px;font-size:.96rem}
+.result .flag{font-family:var(--mono);font-size:.68rem;letter-spacing:.18em;text-transform:uppercase;color:var(--signal);margin-bottom:10px}
+
+/* TILES */
+.tiles{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line);border:1px solid var(--line);margin-top:36px}
+.tile{background:#fff;padding:22px;font-size:.93rem;font-weight:500}
+
+/* PROCESS */
+.flow{display:flex;flex-wrap:wrap;gap:10px;align-items:center;margin:32px 0 28px}
+.step{font-family:var(--mono);font-size:.72rem;letter-spacing:.1em;text-transform:uppercase;padding:11px 15px;border:1px solid var(--line-dark);color:#fff}
+.arrow{color:var(--sea)}
+
+/* FEEDS */
+.feed{display:grid;grid-template-columns:repeat(2,1fr);gap:20px;margin-top:36px}
+.card{border:1px solid var(--line);padding:22px;background:#fff}
+.card h3{font-size:1.06rem;margin-bottom:12px;font-family:var(--body);font-weight:700;letter-spacing:0}
+.meta{font-family:var(--mono);font-size:.7rem;letter-spacing:.08em;color:var(--sea);text-transform:uppercase;margin-bottom:12px}
+.badge{display:inline-block;font-family:var(--mono);font-size:.64rem;letter-spacing:.14em;text-transform:uppercase;padding:4px 9px;border:1px solid var(--signal);color:var(--signal);margin-bottom:12px}
+.rowdata{display:grid;grid-template-columns:auto 1fr;gap:6px 16px;font-size:.85rem;margin:0 0 14px;padding:0}
+.rowdata dt{font-family:var(--mono);font-size:.68rem;letter-spacing:.1em;text-transform:uppercase;color:var(--sea)}
+.rowdata dd{margin:0}
+.empty{border:1px dashed var(--line);padding:38px 24px;text-align:center;background:var(--grey-2);margin-top:36px}
+.empty .meta{margin-bottom:14px}
+.source{font-size:.82rem}
+.commentary{border-left:2px solid var(--teal);padding-left:14px;font-size:.86rem;color:#4a6377;margin:14px 0 0}
+
+/* FORM */
+.form-grid{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-top:32px}
+label{display:block;font-family:var(--mono);font-size:.68rem;letter-spacing:.14em;text-transform:uppercase;color:var(--sea);margin-bottom:7px}
+input,select,textarea{width:100%;padding:12px 13px;border:1px solid var(--line);border-radius:2px;font-family:var(--body);font-size:.95rem;background:#fff;color:var(--navy)}
+textarea{min-height:130px;resize:vertical}
+.full{grid-column:1/-1}
+.formnote{font-size:.82rem;color:#4a6377;margin-top:16px}
+.hp{position:absolute;left:-9999px}
+
+/* Direct contact strip */
+.reach{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line-dark);border:1px solid var(--line-dark);margin:32px 0 8px}
+.reach a{background:var(--navy);padding:22px;text-decoration:none;display:block;color:#fff}
+.reach a:hover{background:var(--hull)}
+.reach .k{font-family:var(--mono);font-size:.66rem;letter-spacing:.18em;text-transform:uppercase;color:var(--sea);display:block;margin-bottom:8px}
+.reach .v{font-size:1.02rem;font-weight:600;color:#fff;display:block;word-break:break-word}
+.reach .s{font-size:.8rem;color:rgba(255,255,255,.6);display:block;margin-top:5px}
+
+/* Sticky mobile action bar */
+.bar{display:none;position:fixed;left:0;right:0;bottom:0;z-index:70;background:var(--navy);border-top:1px solid var(--line-dark)}
+.bar a{flex:1;text-align:center;padding:14px 6px;color:#fff;text-decoration:none;font-size:.82rem;font-weight:600;font-family:var(--body);border-right:1px solid var(--line-dark)}
+.bar a:last-child{border-right:none;background:var(--teal)}
+.nav-call{font-family:var(--mono);font-size:.82rem!important;color:#fff!important;white-space:nowrap}
+
+/* FOOTER */
+footer{background:var(--navy);color:rgba(255,255,255,.72);padding:66px 0 34px;font-size:.9rem}
+.fgrid{display:grid;grid-template-columns:2fr 1fr 1fr;gap:40px}
+footer h4{font-family:var(--mono);font-size:.68rem;letter-spacing:.18em;text-transform:uppercase;color:#fff;margin:0 0 16px}
+footer ul{list-style:none;padding:0;margin:0}
+footer li{margin-bottom:9px}
+footer a{color:rgba(255,255,255,.72);text-decoration:none}
+footer a:hover{color:#fff}
+.disclaim{border-top:1px solid var(--line-dark);margin-top:44px;padding-top:26px;font-size:.82rem;line-height:1.7}
+.disclaim strong{color:#fff;display:block;margin-bottom:10px;font-weight:600}
+
+@media(max-width:940px){
+  .divisions,.feed,.form-grid,.fgrid,.hero-in{grid-template-columns:1fr}
+  .hero-fig{order:-1}
+  .pillars,.tiles{grid-template-columns:1fr 1fr}
+  .alert-in{grid-template-columns:1fr}
+  .nav-links{display:none;position:absolute;top:100%;left:0;right:0;background:var(--navy);flex-direction:column;align-items:flex-start;padding:20px 28px;gap:16px;border-bottom:1px solid var(--line-dark)}
+  .nav-links.open{display:flex}
+  .burger{display:block}
+  .q{grid-template-columns:1fr}
+  section{padding:64px 0}
+  .reach{grid-template-columns:1fr}
+  .bar{display:flex}
+  body{padding-bottom:54px}
+}
+@media(max-width:560px){
+  .pillars,.tiles{grid-template-columns:1fr}
+  .unit{padding-right:18px;margin-right:18px}
+}
+@media(prefers-reduced-motion:reduce){
+  *{transition:none!important;animation:none!important}
+  html{scroll-behavior:auto}
+}
+</style>
+</head>
+<body>
+
+<header class="nav">
+  <div class="nav-in">
+    <a class="brand" href="#top">Cayman Bid &amp; Compliance Services<span>Cayman Bid Desk</span></a>
+    <button class="burger" id="burger" aria-expanded="false" aria-controls="navlinks">Menu</button>
+    <nav class="nav-links" id="navlinks">
+      <a href="#compliance">Compliance</a>
+      <a href="#bid">Bid &amp; Tender Services</a>
+      <a href="#regulatory">Regulatory Updates</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
+      <a class="nav-call" href="tel:+13433015061">+1 (343) 301-5061</a>
+      <a class="btn btn-teal" href="#contact">Request a Consultation</a>
+    </nav>
+  </div>
+</header>
+
+<!-- ============ REGULATORY ALERT BAND ============
+     TO EDIT AFTER 18 SEPT 2026: change the tag text below from
+     "EFFECTIVE 18 SEPTEMBER 2026" to "NOW IN EFFECT" and change
+     "take effect on" to "took effect on". Nothing else needs changing.
+=================================================== -->
+<div class="alert" id="top">
+  <div class="alert-in">
+    <div>
+      <p class="alert-tag" id="alertTag">Regulatory update | Effective 18 September 2026</p>
+      <h2>New CIMA AML and financial sanctions rules take effect</h2>
+      <p id="alertBody">CIMA's Rule on Effective Compliance Programme for the Prevention and Detection of Money Laundering, Terrorist Financing and Proliferation Financing, and its Rule on Compliance with Financial Sanctions and Targeted Financial Sanctions, take effect on 18 September 2026. Both were published on 20 July 2026 and apply to CIMA registered and licensed financial services providers.</p>
+    </div>
+    <div class="alert-act">
+      <a class="btn btn-teal" href="#readiness">Check your implementation readiness</a>
+      <a class="small" href="https://www.cima.ky/" target="_blank" rel="noopener">Read the CIMA requirements</a>
+    </div>
+  </div>
+</div>
+
+<section class="hero" style="padding-top:80px">
+  <div class="wrap hero-in">
+    <div>
+    <p class="eyebrow">Cayman Islands · Bid, tender and compliance support</p>
+    <h1>Cayman business deadlines don't wait. Neither should your documentation.</h1>
+    <p class="lede">Bid, tender and compliance implementation support for Cayman Islands businesses facing procurement requirements, regulatory obligations and fixed deadlines.</p>
+    <div class="hero-btns">
+      <a class="btn btn-teal" href="#contact">Request a Consultation</a>
+      <a class="btn btn-ghost" href="#compliance">Explore our services</a>
+    </div>
+    </div>
+    <figure class="hero-fig">
+      <img src="assets/hero-photo.jpg"
+           srcset="assets/hero-photo-sm.jpg 640w, assets/hero-photo.jpg 872w"
+           sizes="(max-width:940px) 100vw, 44vw"
+           width="872" height="941" loading="eager" decoding="async"
+           alt="Two professionals reviewing a tender document and bid evaluation package in a Cayman Islands office">
+    </figure>
+  </div>
+</section>
+
+<!-- ============ DEADLINE LEDGER (auto-switches after 18 Sept 2026) ============ -->
+<div class="ledger">
+  <div class="wrap">
+    <div class="ledger-box">
+      <div class="ledger-head">
+        <span id="ledgerLabel">CIMA rules effective in</span>
+        <span>Gazetted 20 July 2026 · In force 18 September 2026</span>
+      </div>
+      <div id="counting">
+        <div class="clock">
+          <div class="unit"><b id="dd">--</b><i>Days</i></div>
+          <div class="unit"><b id="hh">--</b><i>Hours</i></div>
+          <div class="unit"><b id="mm">--</b><i>Minutes</i></div>
+          <div class="unit"><b id="ss">--</b><i>Seconds</i></div>
+        </div>
+        <div class="track">
+          <div class="track-bar"><div class="track-fill" id="fill"></div></div>
+          <div class="track-ends"><span>Publication 20 Jul</span><span id="pct">0%</span><span>In force 18 Sep</span></div>
+        </div>
+        <p class="ledger-note">The 60 day period between publication in the Gazette and the date the rules come into force.</p>
+      </div>
+      <div id="live" class="in-effect" hidden>
+        <h3>The new CIMA rules are now in effect</h3>
+        <p style="margin-bottom:20px">Both rules are in force. Implementation evidence, documentation and remediation records may now be subject to review.</p>
+        <a class="btn btn-navy" href="#readiness">Review your implementation status</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<section id="compliance">
+  <div class="wrap">
+    <p class="eyebrow">Two core divisions</p>
+    <h2>What we take off your team's desk</h2>
+    <p style="max-width:66ch">Regulatory requirements and procurement opportunities create documentation and coordination work inside short windows. We supply the project capacity to complete it without adding permanent staff.</p>
+
+    <div class="divisions">
+      <div class="div-card">
+        <p class="eyebrow">Division one</p>
+        <h3>Turn regulatory requirements into completed work</h3>
+        <ul class="div-list">
+          <li>Regulatory requirement mapping</li>
+          <li>Compliance gap documentation</li>
+          <li>Policy and procedure document support</li>
+          <li>AML/CFT/CPF implementation documentation</li>
+          <li>Financial sanctions implementation support</li>
+          <li>Remediation tracking</li>
+          <li>Management evidence packages</li>
+          <li>Compliance project coordination</li>
+          <li>Document organisation and version control</li>
+          <li>Temporary project capacity for compliance teams</li>
+        </ul>
+        <p class="scope">Regulatory interpretation, certification, audit and professional sign-off remain with your appropriately qualified compliance, legal or regulatory advisers. We do not act as AMLCO, MLRO or DMLRO.</p>
+        <a class="btn btn-out" href="#contact">Explore compliance support</a>
+      </div>
+
+      <div class="div-card" id="bid">
+        <p class="eyebrow">Division two</p>
+        <h3>From tender notice to submission</h3>
+        <ul class="div-list">
+          <li>Tender opportunity screening</li>
+          <li>Bid and no-bid assessment support</li>
+          <li>Tender requirement extraction</li>
+          <li>Compliance matrices</li>
+          <li>Submission checklists</li>
+          <li>Proposal drafting support</li>
+          <li>Tender document organisation</li>
+          <li>Response coordination and deadline management</li>
+          <li>Submission readiness review</li>
+          <li>Government procurement and private RFP support</li>
+        </ul>
+        <p class="scope">Procurement decisions rest entirely with the buyer. We improve the organisation and preparation of a submission. We never guarantee an award.</p>
+        <a class="btn btn-out" href="#contact">Explore bid support</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="dark">
+  <div class="wrap">
+    <p class="eyebrow">Why Cayman Bid &amp; Compliance Services</p>
+    <h2>Deadlines create work. We help get it done.</h2>
+    <p style="max-width:68ch">Regulatory requirements and procurement opportunities can generate significant documentation and coordination demands within a short period. We provide additional project capacity when businesses need research, documentation, coordination and submission support without hiring.</p>
+    <div class="pillars">
+      <div class="pillar"><h3>Deadline focused</h3><p>Projects organised around the date that matters.</p></div>
+      <div class="pillar"><h3>Document driven</h3><p>Requirements converted into organised working documents and deliverables.</p></div>
+      <div class="pillar"><h3>Flexible capacity</h3><p>Additional project support when internal teams need it.</p></div>
+      <div class="pillar"><h3>Cayman focused</h3><p>Services developed around the needs of Cayman Islands businesses.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="readiness" style="background:var(--grey-2)">
+  <div class="wrap">
+    <p class="eyebrow">September 18 readiness</p>
+    <h2>Is your September 18 implementation work complete?</h2>
+    <p style="max-width:66ch">Five questions about documentation status. This is not a compliance assessment and produces no finding about your regulatory position.</p>
+
+    <div class="checker" id="checker">
+      <div class="q" data-q="1"><p><span class="num">Question 01</span>Have the new CIMA requirements been mapped against your existing compliance programme?</p><div class="opts"><button type="button" data-v="yes">Yes</button><button type="button" data-v="no">No</button><button type="button" data-v="unsure">Unsure</button></div></div>
+      <div class="q" data-q="2"><p><span class="num">Question 02</span>Have required policies, procedures and controls been reviewed against the new rules?</p><div class="opts"><button type="button" data-v="yes">Yes</button><button type="button" data-v="no">No</button><button type="button" data-v="unsure">Unsure</button></div></div>
+      <div class="q" data-q="3"><p><span class="num">Question 03</span>Is evidence of implementation organised and readily available?</p><div class="opts"><button type="button" data-v="yes">Yes</button><button type="button" data-v="no">No</button><button type="button" data-v="unsure">Unsure</button></div></div>
+      <div class="q" data-q="4"><p><span class="num">Question 04</span>Are remediation items documented, assigned and tracked?</p><div class="opts"><button type="button" data-v="yes">Yes</button><button type="button" data-v="no">No</button><button type="button" data-v="unsure">Unsure</button></div></div>
+      <div class="q" data-q="5"><p><span class="num">Question 05</span>Has your financial sanctions framework been reviewed against the new requirements?</p><div class="opts"><button type="button" data-v="yes">Yes</button><button type="button" data-v="no">No</button><button type="button" data-v="unsure">Unsure</button></div></div>
+      <div class="result" id="result" hidden>
+        <p class="flag" id="resultFlag">Response summary</p>
+        <p id="resultText">Your responses may indicate areas worth reviewing before 18 September 2026.</p>
+        <a class="btn btn-navy" href="#contact">Request an implementation review</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <p class="eyebrow">Who we support</p>
+    <h2>Cayman financial services providers</h2>
+    <p style="max-width:66ch">Regulatory obligations differ by entity, licence category and activity. The categories below indicate the sectors we work with, not a statement that every entity within them carries identical requirements.</p>
+    <div class="tiles">
+      <div class="tile">Corporate service providers</div>
+      <div class="tile">Trust companies</div>
+      <div class="tile">Fund administrators</div>
+      <div class="tile">Investment managers and funds</div>
+      <div class="tile">Insurance businesses</div>
+      <div class="tile">Securities businesses</div>
+      <div class="tile">Virtual asset service providers</div>
+      <div class="tile">Money services businesses</div>
+      <div class="tile">Other Cayman financial services providers</div>
+    </div>
+  </div>
+</section>
+
+<section class="dark">
+  <div class="wrap">
+    <p class="eyebrow">The Cayman Bid Desk</p>
+    <h2>See the opportunity. Understand the requirements. Submit a stronger response.</h2>
+    <p style="max-width:68ch">Tender packages run long. Time disappears into reading requirements, chasing supporting documents and coordinating who writes what. The Bid Desk converts a procurement document into an organised submission project with named deliverables and a working deadline.</p>
+    <div class="flow">
+      <span class="step">Opportunity</span><span class="arrow">→</span>
+      <span class="step">Requirements</span><span class="arrow">→</span>
+      <span class="step">Compliance matrix</span><span class="arrow">→</span>
+      <span class="step">Proposal</span><span class="arrow">→</span>
+      <span class="step">Review</span><span class="arrow">→</span>
+      <span class="step">Submission</span>
+    </div>
+    <a class="btn btn-teal" href="#contact">Have a tender? Tell us about it</a>
+  </div>
+</section>
+
+<!-- ============ PROCUREMENT WATCH ============
+     TO ADD AN OPPORTUNITY: copy one block inside the OPPORTUNITIES array
+     below and fill in every field from the official source. Do not add an
+     entry that has not been verified against an official procurement notice.
+     Status options: NEW | OPEN | CLOSING SOON | AWARDED | CLOSED
+============================================== -->
+<section id="procurement">
+  <div class="wrap">
+    <p class="eyebrow">Cayman procurement watch</p>
+    <h2>Open opportunities</h2>
+    <p style="max-width:66ch">Verified public procurement notices from official Cayman sources, with closing dates and days remaining. Every entry links to the issuing authority.</p>
+    <div id="oppFeed"></div>
+
+    <div style="border:1px solid var(--line);padding:26px;margin-top:26px;background:var(--grey-2)">
+      <h3 style="margin-bottom:10px">Want relevant opportunities sent to you?</h3>
+      <p style="font-size:.92rem;margin-bottom:18px">Tell us your sector and we will send notices that match it.</p>
+      <form data-mailform method="POST">
+        <input type="hidden" name="_subject" value="Procurement Watch signup">
+        <input type="hidden" name="_captcha" value="true">
+        <input type="text" name="_honey" class="hp" tabindex="-1" autocomplete="off">
+        <div class="form-grid" style="margin-top:0">
+          <div><label for="pwEmail">Business email</label><input id="pwEmail" type="email" name="email" required></div>
+          <div><label for="pwSector">Industry</label>
+            <select id="pwSector" name="industry">
+              <option>Construction and civil works</option>
+              <option>Professional and consulting services</option>
+              <option>Information technology</option>
+              <option>Facilities and maintenance</option>
+              <option>Supplies and equipment</option>
+              <option>Financial services</option>
+              <option>Other</option>
+            </select>
+          </div>
+          <div class="full"><button class="btn btn-navy" type="submit">Join Procurement Watch</button></div>
+        </div>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- ============ REGULATORY WATCH ============
+     Every entry needs: regulator, published date, effective date, sector,
+     factual summary, official source link, and last reviewed date.
+     Keep "Source information" separate from our own commentary.
+========================================== -->
+<section id="regulatory" style="background:var(--grey-2)">
+  <div class="wrap">
+    <p class="eyebrow">Cayman regulatory watch</p>
+    <h2>Latest regulatory updates</h2>
+    <p style="max-width:66ch">Factual summaries of published regulatory measures, each linked to the issuing authority. Our commentary is marked separately from source information.</p>
+    <div class="feed">
+
+      <article class="card">
+        <span class="badge">Effective 18 Sep 2026</span>
+        <div class="meta">CIMA · Published 20 July 2026</div>
+        <h3>Rule on Effective Compliance Programme for the Prevention and Detection of ML, TF and PF</h3>
+        <dl class="rowdata">
+          <dt>Regulator</dt><dd>Cayman Islands Monetary Authority</dd>
+          <dt>Effective</dt><dd>18 September 2026</dd>
+          <dt>Applies to</dt><dd>CIMA registered and licensed financial services providers</dd>
+        </dl>
+        <p style="font-size:.92rem">The rule sets binding minimum standards for an AML/CFT/CPF compliance programme, including a documented governance framework, defined roles and lines of accountability, and a documented risk based approach. Requirements previously addressed through guidance become enforceable obligations.</p>
+        <p class="commentary"><strong>Cayman Bid &amp; Compliance Services commentary:</strong> the documentation and evidence burden lands in the weeks before the effective date. Requirement mapping and evidence organisation are the two items most often left incomplete.</p>
+        <p class="source" style="margin-top:14px"><a href="https://www.cima.ky/" target="_blank" rel="noopener">Official source: cima.ky</a><br><span style="color:#4a6377">Last reviewed 12 August 2026</span></p>
+      </article>
+
+      <article class="card">
+        <span class="badge">Effective 18 Sep 2026</span>
+        <div class="meta">CIMA · Published 20 July 2026</div>
+        <h3>Rule on Compliance with Financial Sanctions and Targeted Financial Sanctions</h3>
+        <dl class="rowdata">
+          <dt>Regulator</dt><dd>Cayman Islands Monetary Authority</dd>
+          <dt>Effective</dt><dd>18 September 2026</dd>
+          <dt>Applies to</dt><dd>CIMA registered and licensed financial services providers</dd>
+        </dl>
+        <p style="font-size:.92rem">Published alongside the AML rule following industry consultation, this rule sets binding requirements for sanctions and targeted financial sanctions compliance, including screening obligations. Both rules take effect 60 days after publication in the Gazette.</p>
+        <p class="commentary"><strong>Cayman Bid &amp; Compliance Services commentary:</strong> sanctions screening records are frequently held across separate systems. Consolidating that evidence into a single reviewable package takes longer than firms expect.</p>
+        <p class="source" style="margin-top:14px"><a href="https://www.cima.ky/" target="_blank" rel="noopener">Official source: cima.ky</a><br><span style="color:#4a6377">Last reviewed 12 August 2026</span></p>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<section id="about">
+  <div class="wrap" style="max-width:820px">
+    <p class="eyebrow">About</p>
+    <h2>Built for deadline driven work</h2>
+    <p>Cayman Bid &amp; Compliance Services provides business documentation, procurement and compliance implementation support to Cayman Islands organisations. The work is research, documentation, coordination and completion, delivered against a fixed date.</p>
+    <p>We are not a law firm, an accounting firm, a regulator, or a substitute for your regulated compliance professionals. Where specialist regulatory interpretation, legal advice, certification, audit or professional sign off is required, that responsibility stays with your qualified advisers.</p>
+    <p style="border-left:2px solid var(--teal);padding-left:16px;font-size:.94rem"><strong>Cayman Bid &amp; Compliance Services is a business name of ProRN Inc., an Ontario corporation.</strong> Services are delivered to Cayman Islands businesses remotely and on project.</p>
+
+    <h3 style="margin-top:44px">Frequently asked questions</h3>
+    <div style="border-top:1px solid var(--line);margin-top:20px">
+      <div style="padding:20px 0;border-bottom:1px solid var(--line)">
+        <h3 style="font-family:var(--body);font-size:1rem;font-weight:700;margin-bottom:8px">Do you provide legal advice?</h3>
+        <p style="margin:0;font-size:.93rem">No. We provide business documentation, implementation and project support. Legal advice should be obtained from qualified Cayman legal counsel.</p>
+      </div>
+      <div style="padding:20px 0;border-bottom:1px solid var(--line)">
+        <h3 style="font-family:var(--body);font-size:1rem;font-weight:700;margin-bottom:8px">Do you replace our AMLCO or MLRO?</h3>
+        <p style="margin:0;font-size:.93rem">No. We provide additional project and documentation capacity. Regulatory responsibilities remain with the regulated entity and its designated officers.</p>
+      </div>
+      <div style="padding:20px 0;border-bottom:1px solid var(--line)">
+        <h3 style="font-family:var(--body);font-size:1rem;font-weight:700;margin-bottom:8px">Can you help with the September 18 CIMA rules?</h3>
+        <p style="margin:0;font-size:.93rem">We assist with requirement mapping, documentation organisation, implementation project support and remediation tracking. Specialist interpretation and professional sign off remain with your qualified advisers.</p>
+      </div>
+      <div style="padding:20px 0;border-bottom:1px solid var(--line)">
+        <h3 style="font-family:var(--body);font-size:1rem;font-weight:700;margin-bottom:8px">Can you help us respond to a Cayman Government tender?</h3>
+        <p style="margin:0;font-size:.93rem">Yes. Tender analysis, requirement matrices, document coordination, proposal development support and submission readiness review.</p>
+      </div>
+      <div style="padding:20px 0;border-bottom:1px solid var(--line)">
+        <h3 style="font-family:var(--body);font-size:1rem;font-weight:700;margin-bottom:8px">Do you guarantee that we will win the tender?</h3>
+        <p style="margin:0;font-size:.93rem">No. Procurement decisions rest entirely with the buyer. We improve how the submission is organised and prepared. We never guarantee an award.</p>
+      </div>
+      <div style="padding:20px 0;border-bottom:1px solid var(--line)">
+        <h3 style="font-family:var(--body);font-size:1rem;font-weight:700;margin-bottom:8px">Can we send you our RFP before hiring you?</h3>
+        <p style="margin:0;font-size:.93rem">Yes. Use the form below to describe the tender and we will reply with a secure method of sending the documents. Please do not attach confidential procurement documents to the web form.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="contact" class="dark">
+  <div class="wrap">
+    <p class="eyebrow">Contact</p>
+    <h2>What's your deadline?</h2>
+    <p style="max-width:62ch">Tell us the regulation, tender or documentation problem and the date you are working toward.</p>
+
+    <div class="reach">
+      <a href="tel:+13433015061"><span class="k">Call</span><span class="v">+1 (343) 301-5061</span><span class="s">Dial +1 from the Cayman Islands</span></a>
+      <a href="https://wa.me/13433015061?text=Hi%2C%20I%27m%20enquiring%20about%20bid%20and%20compliance%20support%20for%20a%20Cayman%20deadline." target="_blank" rel="noopener"><span class="k">WhatsApp</span><span class="v">Message us</span><span class="s">Fastest reply during Cayman business hours</span></a>
+      <a data-mailto data-subject="Cayman Bid Desk enquiry" href="#contact"><span class="k">Email</span><span class="v">Email us</span><span class="s">Opens your mail app. Send nothing confidential until we reply.</span></a>
+    </div>
+
+    <form data-mailform method="POST" style="margin-top:10px">
+      <input type="hidden" name="_subject" value="Project review request - caymanbiddesk.com">
+      <input type="hidden" name="_captcha" value="true">
+      <input type="hidden" name="_template" value="table">
+      <input type="text" name="_honey" class="hp" tabindex="-1" autocomplete="off">
+      <div class="form-grid">
+        <div><label for="nm">Name</label><input id="nm" name="name" type="text" required></div>
+        <div><label for="co">Company</label><input id="co" name="company" type="text" required></div>
+        <div><label for="em">Business email</label><input id="em" name="email" type="email" required></div>
+        <div><label for="ph">Phone or WhatsApp</label><input id="ph" name="phone" type="tel"></div>
+        <div><label for="sv">Service required</label>
+          <select id="sv" name="service">
+            <option>September 18 CIMA implementation</option>
+            <option>AML/CFT/CPF documentation</option>
+            <option>Financial sanctions documentation</option>
+            <option>Regulatory remediation</option>
+            <option>Government tender</option>
+            <option>Private RFP</option>
+            <option>Bid review</option>
+            <option>Other</option>
+          </select>
+        </div>
+        <div><label for="dl">What deadline are you working toward?</label><input id="dl" name="deadline" type="date"></div>
+        <div class="full"><label for="ms">Tell us what needs to be completed</label><textarea id="ms" name="message" required></textarea></div>
+        <div class="full"><button class="btn btn-teal" type="submit">Request project review</button></div>
+      </div>
+      <p class="formnote">Please do not attach confidential tender or client documents to this form. Describe the project and we will reply with a secure method of sending files. Information submitted here is used only to assess your enquiry.</p>
+    </form>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="fgrid">
+      <div>
+        <h4>Cayman Bid &amp; Compliance Services</h4>
+        <p style="margin-bottom:10px">A business name of ProRN Inc.<br>Toronto, Ontario, Canada</p>
+        <p style="margin:0 0 16px">Serving Cayman Islands businesses remotely and on project.</p>
+        <p style="margin:0"><a href="tel:+13433015061">+1 (343) 301-5061</a><br>
+        <a href="https://wa.me/13433015061?text=Hi%2C%20I%27m%20enquiring%20about%20bid%20and%20compliance%20support%20for%20a%20Cayman%20deadline." target="_blank" rel="noopener">WhatsApp</a><br>
+        <a data-mailto href="#contact">Email us</a></p>
+      </div>
+      <div>
+        <h4>Services</h4>
+        <ul>
+          <li><a href="#compliance">Compliance implementation</a></li>
+          <li><a href="#bid">Bid and tender support</a></li>
+          <li><a href="#procurement">Procurement Watch</a></li>
+          <li><a href="#regulatory">Regulatory Watch</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Company</h4>
+        <ul>
+          <li><a href="#about">About</a></li>
+          <li><a href="#contact">Contact</a></li>
+          <li><a href="/privacy.html">Privacy policy</a></li>
+          <li><a href="/terms.html">Terms of use</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="disclaim">
+      <strong>Cayman Bid &amp; Compliance Services is an independent business and is not affiliated with, endorsed by, or acting on behalf of the Cayman Islands Monetary Authority or the Cayman Islands Government.</strong>
+      Information on this website is general information about our services and about published regulatory measures. It does not constitute legal, regulatory or compliance advice, and it should not be relied on in place of advice from appropriately qualified professional advisers. Regulatory summaries link to official sources and were accurate on the last reviewed date shown.
+      <p style="margin:22px 0 0">&copy; <span id="yr"></span> ProRN Inc. All rights reserved.</p>
+    </div>
+  </div>
+</footer>
+
+<div class="bar">
+  <a href="tel:+13433015061">Call</a>
+  <a href="https://wa.me/13433015061?text=Hi%2C%20I%27m%20enquiring%20about%20bid%20and%20compliance%20support%20for%20a%20Cayman%20deadline." target="_blank" rel="noopener">WhatsApp</a>
+  <a href="#contact">Request review</a>
+</div>
+
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"ProfessionalService",
+  "name":"Cayman Bid & Compliance Services",
+  "alternateName":"Cayman Bid Desk",
+  "url":"https://www.caymanbiddesk.com/",
+  "image":"https://www.caymanbiddesk.com/assets/og-image.jpg",
+  "description":"Bid, tender and compliance implementation support for Cayman Islands businesses, including requirement mapping, documentation, procurement response coordination and deadline project capacity.",
+  "parentOrganization":{"@type":"Organization","name":"ProRN Inc."},
+  "address":{"@type":"PostalAddress","addressLocality":"Toronto","addressRegion":"ON","addressCountry":"CA"},
+  "areaServed":{"@type":"Country","name":"Cayman Islands"},
+  "telephone":"+1-343-301-5061",
+  "contactPoint":{"@type":"ContactPoint","telephone":"+1-343-301-5061","contactType":"sales","areaServed":"KY","availableLanguage":"English"},
+  "knowsAbout":["Cayman tender support","CIMA compliance documentation","AML/CFT/CPF implementation","Government procurement response"]
+}
+</script>
+
+<script>
+/* ---------- Email assembly ----------
+   The address is never written into the HTML source. It is rebuilt in the
+   browser from separate pieces, so scrapers reading the raw page find nothing.
+   TO CHANGE THE ADDRESS: edit USER and HOST on the next two lines only.        */
+var USER = ['pro','rn','inc'].join('');
+var HOST = ['gm','ail','.com'].join('');
+var ADDR = USER + String.fromCharCode(64) + HOST;
+
+document.querySelectorAll('[data-mailform]').forEach(function(f){
+  f.setAttribute('action', 'https://formsubmit.co/' + ADDR);
+});
+document.querySelectorAll('[data-mailto]').forEach(function(a){
+  var subj = a.getAttribute('data-subject');
+  a.setAttribute('href', 'mailto:' + ADDR + (subj ? '?subject=' + encodeURIComponent(subj) : ''));
+});
+
+/* ---------- Footer year ---------- */
+document.getElementById('yr').textContent = new Date().getFullYear();
+
+/* ---------- Mobile nav ---------- */
+var burger = document.getElementById('burger'), links = document.getElementById('navlinks');
+burger.addEventListener('click', function(){
+  var open = links.classList.toggle('open');
+  burger.setAttribute('aria-expanded', open);
+});
+links.addEventListener('click', function(e){ if(e.target.tagName === 'A') links.classList.remove('open'); });
+
+/* ---------- Deadline ledger ----------
+   Cayman Islands is UTC-5 year round (no daylight saving).       */
+var GAZETTE = new Date('2026-07-20T00:00:00-05:00').getTime();
+var EFFECT  = new Date('2026-09-18T00:00:00-05:00').getTime();
+
+function pad(n){ return n < 10 ? '0' + n : '' + n; }
+
+function tick(){
+  var now = Date.now(), left = EFFECT - now;
+
+  if (left <= 0){
+    document.getElementById('counting').hidden = true;
+    document.getElementById('live').hidden = false;
+    document.getElementById('ledgerLabel').textContent = 'Now in effect';
+    document.getElementById('alertTag').textContent = 'Regulatory update | Now in effect';
+    return;
+  }
+  document.getElementById('dd').textContent = pad(Math.floor(left / 86400000));
+  document.getElementById('hh').textContent = pad(Math.floor(left / 3600000) % 24);
+  document.getElementById('mm').textContent = pad(Math.floor(left / 60000) % 60);
+  document.getElementById('ss').textContent = pad(Math.floor(left / 1000) % 60);
+
+  var pct = Math.min(100, Math.max(0, ((now - GAZETTE) / (EFFECT - GAZETTE)) * 100));
+  document.getElementById('fill').style.width = pct.toFixed(1) + '%';
+  document.getElementById('pct').textContent = Math.round(pct) + '% elapsed';
+}
+tick();
+setInterval(tick, 1000);
+
+/* ---------- Readiness checker ---------- */
+var answers = {};
+document.querySelectorAll('#checker .q').forEach(function(row){
+  row.querySelectorAll('.opts button').forEach(function(b){
+    b.setAttribute('aria-pressed','false');
+    b.addEventListener('click', function(){
+      row.querySelectorAll('.opts button').forEach(function(o){ o.setAttribute('aria-pressed','false'); });
+      b.setAttribute('aria-pressed','true');
+      answers[row.dataset.q] = b.dataset.v;
+      if (Object.keys(answers).length === 5) showResult();
+    });
+  });
+});
+
+function showResult(){
+  var open = 0;
+  for (var k in answers){ if (answers[k] !== 'yes') open++; }
+  var box = document.getElementById('result');
+  document.getElementById('resultFlag').textContent = open === 0
+    ? 'All five areas marked complete'
+    : open + ' of 5 areas marked incomplete or unconfirmed';
+  document.getElementById('resultText').textContent = open === 0
+    ? 'Your responses indicate documentation work has been addressed in all five areas. A review before 18 September 2026 may still be worthwhile to confirm evidence is organised and retrievable.'
+    : 'Your responses may indicate areas worth reviewing before 18 September 2026.';
+  box.hidden = false;
+  box.scrollIntoView({ behavior:'smooth', block:'nearest' });
+}
+
+/* ---------- Procurement Watch ----------
+   ADD OPPORTUNITIES HERE. Every field must come from an official
+   procurement notice. Leave the array empty until verified.
+   Status: NEW | OPEN | CLOSING SOON | AWARDED | CLOSED             */
+var OPPORTUNITIES = [
+  /* Example of the shape. Delete this comment and add real entries:
+  {
+    buyer: "Cayman Islands Government",
+    title: "",
+    sector: "",
+    published: "2026-08-01",
+    closes: "2026-09-05",
+    reference: "",
+    sourceUrl: "",
+    sourceName: "",
+    status: "OPEN"
+  }
+  */
+];
+
+function renderOpps(){
+  var host = document.getElementById('oppFeed');
+  if (!OPPORTUNITIES.length){
+    host.innerHTML =
+      '<div class="empty">' +
+      '<p class="meta">Monitoring in progress</p>' +
+      '<p style="margin:0 0 6px;font-weight:600">No verified opportunities are listed right now.</p>' +
+      '<p style="margin:0;font-size:.9rem;color:#4a6377">We only publish procurement notices confirmed against an official source. Join the list below and we will send matches for your sector as they are published.</p>' +
+      '</div>';
+    return;
+  }
+  var html = '<div class="feed">';
+  OPPORTUNITIES.forEach(function(o){
+    var days = Math.ceil((new Date(o.closes + 'T00:00:00-05:00') - Date.now()) / 86400000);
+    html +=
+      '<article class="card">' +
+        '<span class="badge">' + o.status + '</span>' +
+        '<div class="meta">' + o.buyer + '</div>' +
+        '<h3>' + o.title + '</h3>' +
+        '<dl class="rowdata">' +
+          '<dt>Sector</dt><dd>' + o.sector + '</dd>' +
+          '<dt>Published</dt><dd>' + o.published + '</dd>' +
+          '<dt>Closes</dt><dd>' + o.closes + '</dd>' +
+          '<dt>Remaining</dt><dd>' + (days > 0 ? days + ' days' : 'Closed') + '</dd>' +
+          '<dt>Reference</dt><dd>' + o.reference + '</dd>' +
+        '</dl>' +
+        '<p class="source"><a href="' + o.sourceUrl + '" target="_blank" rel="noopener">Official source: ' + o.sourceName + '</a></p>' +
+        '<p style="margin:14px 0 0"><a href="#contact">Need help responding?</a></p>' +
+      '</article>';
+  });
+  html += '</div>';
+  host.innerHTML = html;
+}
+renderOpps();
+</script>
+</body>
+</html>
