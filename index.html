@@ -291,22 +291,21 @@ footer a:hover{color:#fff}
       </div>
       <div id="counting">
         <div class="clock">
-          <div class="unit"><b id="dd">--</b><i>Days</i></div>
-          <div class="unit"><b id="hh">--</b><i>Hours</i></div>
-          <div class="unit"><b id="mm">--</b><i>Minutes</i></div>
-          <div class="unit"><b id="ss">--</b><i>Seconds</i></div>
+          <div class="unit"><b id="dd">&nbsp;</b><i>Days</i></div>
+          <div class="unit"><b id="hh">&nbsp;</b><i>Hours</i></div>
+          <div class="unit"><b id="mm">&nbsp;</b><i>Minutes</i></div>
+          <div class="unit"><b id="ss">&nbsp;</b><i>Seconds</i></div>
         </div>
         <div class="track">
           <div class="track-bar"><div class="track-fill" id="fill"></div></div>
           <div class="track-ends"><span>Publication 20 Jul</span><span id="pct">0%</span><span>In force 18 Sep</span></div>
         </div>
-        <p class="ledger-note">The 60 day period between publication in the Gazette and the date the rules come into force.</p>
+        <p class="ledger-note">Both rules are in force from Friday, 18 September 2026, sixty days after publication in the Gazette on 20 July 2026.</p>
       </div>
-      <div id="live" class="in-effect" hidden>
-        <h3>The new CIMA rules are now in effect</h3>
-        <p style="margin-bottom:20px">Both rules are in force. Implementation evidence, documentation and remediation records may now be subject to review.</p>
-        <a class="btn btn-navy" href="#readiness">Review your implementation status</a>
-      </div>
+      <!-- The "now in effect" panel is created by JavaScript on 18 September 2026.
+           It is deliberately not written into this file, so nothing can read it as
+           current before that date. -->
+
     </div>
   </div>
 </div>
@@ -491,7 +490,7 @@ footer a:hover{color:#fff}
           <dt>Applies to</dt><dd>CIMA registered and licensed financial services providers</dd>
         </dl>
         <p style="font-size:.92rem">The rule sets binding minimum standards for an AML/CFT/CPF compliance programme, including a documented governance framework, defined roles and lines of accountability, and a documented risk based approach. Requirements previously addressed through guidance become enforceable obligations.</p>
-        <p class="commentary"><strong>Cayman Bid &amp; Compliance Services commentary:</strong> the documentation and evidence burden lands in the weeks before the effective date. Requirement mapping and evidence organisation are the two items most often left incomplete.</p>
+        <p class="commentary"><strong>Cayman Bid &amp; Compliance Services commentary:</strong> requirement mapping and the organisation of implementation evidence can involve substantial documentation work, and both are separable from the regulatory interpretation that belongs to your advisers.</p>
         <p class="source" style="margin-top:14px"><a href="https://www.cima.ky/upimages/regulatorymeasures/Rule-EffectiveComplianceProgrammeforMLTFPF_1784899845.pdf" target="_blank" rel="noopener">Official source: the rule (PDF, CIMA)</a><br><a href="https://www.cima.ky/aml-cft-faqs" target="_blank" rel="noopener">CIMA guidance FAQs</a><br><span style="color:#4a6377">Last reviewed 12 August 2026</span></p>
       </article>
 
@@ -505,7 +504,7 @@ footer a:hover{color:#fff}
           <dt>Applies to</dt><dd>CIMA registered and licensed financial services providers</dd>
         </dl>
         <p style="font-size:.92rem">Published alongside the AML rule following industry consultation, this rule sets binding requirements for sanctions and targeted financial sanctions compliance, including screening obligations. Both rules take effect 60 days after publication in the Gazette.</p>
-        <p class="commentary"><strong>Cayman Bid &amp; Compliance Services commentary:</strong> sanctions screening records are frequently held across separate systems. Consolidating that evidence into a single reviewable package takes longer than firms expect.</p>
+        <p class="commentary"><strong>Cayman Bid &amp; Compliance Services commentary:</strong> where sanctions screening records sit across more than one system, consolidating them into a single reviewable package is a documentation exercise worth scoping against the effective date.</p>
         <p class="source" style="margin-top:14px"><a href="https://www.cima.ky/upimages/regulatorymeasures/Rule-CompliancewithFinancialSanctionsandTargetedFinancialSanctions_1784899917.pdf" target="_blank" rel="noopener">Official source: the rule (PDF, CIMA)</a><br><a href="https://www.cima.ky/aml-cft-faqs" target="_blank" rel="noopener">CIMA guidance FAQs</a><br><span style="color:#4a6377">Last reviewed 12 August 2026</span></p>
       </article>
 
@@ -784,12 +783,20 @@ function tick(){
   var now = Date.now(), left = EFFECT - now;
 
   if (left <= 0){
-    document.getElementById('counting').hidden = true;
-    document.getElementById('live').hidden = false;
+    var box = document.getElementById('counting');
+    box.innerHTML =
+      '<div class="in-effect">' +
+      '<h3>The new CIMA rules are now in effect</h3>' +
+      '<p style="margin-bottom:20px">Both rules are in force. Implementation evidence, documentation and remediation records may now be subject to review.</p>' +
+      '<a class="btn btn-navy" href="#readiness">Review your implementation status</a>' +
+      '</div>';
     document.getElementById('ledgerLabel').textContent = 'Now in effect';
     document.getElementById('alertTag').textContent = 'Regulatory update | Now in effect';
+    document.getElementById('alertBody').textContent =
+      document.getElementById('alertBody').textContent.replace('take effect on', 'took effect on');
     return;
   }
+
   document.getElementById('dd').textContent = pad(Math.floor(left / 86400000));
   document.getElementById('hh').textContent = pad(Math.floor(left / 3600000) % 24);
   document.getElementById('mm').textContent = pad(Math.floor(left / 60000) % 60);
