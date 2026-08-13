@@ -706,8 +706,6 @@ document.querySelectorAll('[data-mailform]').forEach(function(f){
   f.addEventListener('submit', function(e){
     e.preventDefault();
 
-    if (f.querySelector('[name="_honey"]') && f.querySelector('[name="_honey"]').value) return;
-
     var btn = f.querySelector('button[type="submit"]');
     var label = btn ? btn.textContent : '';
     if (btn){ btn.disabled = true; btn.textContent = 'Sending...'; }
@@ -727,6 +725,7 @@ document.querySelectorAll('[data-mailform]').forEach(function(f){
     })
     .catch(function(err){
       if (btn){ btn.disabled = false; btn.textContent = label; }
+      f.setAttribute('action', 'https://formsubmit.co/' + ADDR);
       say(f, (err && err.message && err.message !== 'failed' ? err.message + ' ' : '') +
              'If this keeps happening, call or WhatsApp +1 (343) 301-5061 and we will pick it up straight away.', false);
     });
