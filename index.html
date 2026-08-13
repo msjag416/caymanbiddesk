@@ -725,9 +725,10 @@ document.querySelectorAll('[data-mailform]').forEach(function(f){
       if (d && String(d.success) === 'false') throw new Error(d.message || 'failed');
       done(f, true);
     })
-    .catch(function(){
+    .catch(function(err){
       if (btn){ btn.disabled = false; btn.textContent = label; }
-      say(f, 'That did not send. Please call or WhatsApp +1 (343) 301-5061 and we will pick it up straight away.', false);
+      say(f, (err && err.message && err.message !== 'failed' ? err.message + ' ' : '') +
+             'If this keeps happening, call or WhatsApp +1 (343) 301-5061 and we will pick it up straight away.', false);
     });
   });
 });
