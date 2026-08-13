@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Privacy policy | Cayman Bid Desk</title>
+<meta name="description" content="How Cayman Bid & Compliance Services collects, uses and retains information submitted through this website.">
+<link rel="canonical" href="https://www.caymanbiddesk.com/privacy.html">
+<meta name="robots" content="index, follow">
+<link rel="icon" href="favicon.ico" sizes="any">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Spectral:wght@400;500;600&family=Public+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --navy:#0B2233;
+  --hull:#103449;
+  --teal:#0E7C86;
+  --sea:#4E8FA8;
+  --grey:#E8EDF1;
+  --grey-2:#F5F8FA;
+  --paper:#FFFFFF;
+  --signal:#B5822C;
+  --line:rgba(11,34,51,.14);
+  --line-dark:rgba(255,255,255,.16);
+  --display:'Spectral',Georgia,serif;
+  --body:'Public Sans',system-ui,-apple-system,sans-serif;
+  --mono:'IBM Plex Mono',ui-monospace,monospace;
+  --wrap:1180px;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:120px}
+body{margin:0;font-family:var(--body);color:var(--navy);background:var(--paper);font-size:17px;line-height:1.65;-webkit-font-smoothing:antialiased}
+img{max-width:100%;display:block}
+a{color:var(--teal)}
+.wrap{max-width:var(--wrap);margin:0 auto;padding:0 28px}
+.eyebrow{font-family:var(--mono);font-size:.72rem;letter-spacing:.18em;text-transform:uppercase;color:var(--sea);margin:0 0 14px}
+h1,h2,h3{font-family:var(--display);font-weight:600;line-height:1.15;letter-spacing:-.01em;margin:0 0 18px}
+h2{font-size:clamp(1.7rem,3.4vw,2.5rem)}
+h3{font-size:1.28rem}
+p{margin:0 0 18px}
+section{padding:88px 0}
+:focus-visible{outline:3px solid var(--signal);outline-offset:3px}
+
+/* NAV */
+.nav{position:sticky;top:0;z-index:60;background:rgba(11,34,51,.97);backdrop-filter:blur(8px);border-bottom:1px solid var(--line-dark)}
+.nav-in{max-width:var(--wrap);margin:0 auto;padding:14px 28px;display:flex;align-items:center;gap:28px}
+.brand{font-family:var(--display);color:#fff;text-decoration:none;font-size:1.06rem;font-weight:600;line-height:1.2;letter-spacing:-.01em}
+.brand span{display:block;font-family:var(--mono);font-size:.6rem;letter-spacing:.2em;text-transform:uppercase;color:var(--sea);font-weight:400;margin-top:3px}
+.nav-links{display:flex;gap:22px;margin-left:auto;align-items:center}
+.nav-links a{color:rgba(255,255,255,.82);text-decoration:none;font-size:.87rem;font-weight:500}
+.nav-links a:hover{color:#fff}
+.btn{display:inline-block;padding:12px 22px;border-radius:2px;font-weight:600;font-size:.88rem;text-decoration:none;border:1px solid transparent;cursor:pointer;font-family:var(--body);transition:background .18s,color .18s}
+.btn-teal{background:var(--teal);color:#fff}
+.btn-teal:hover{background:#0a5f67}
+.btn-ghost{border-color:rgba(255,255,255,.4);color:#fff;background:transparent}
+.btn-ghost:hover{background:rgba(255,255,255,.1)}
+.btn-navy{background:var(--navy);color:#fff}
+.btn-navy:hover{background:var(--hull)}
+.btn-out{border-color:var(--navy);color:var(--navy);background:transparent}
+.btn-out:hover{background:var(--navy);color:#fff}
+.burger{display:none;margin-left:auto;background:none;border:1px solid var(--line-dark);color:#fff;padding:9px 12px;border-radius:2px;font-size:1rem;cursor:pointer}
+
+/* ALERT BAND */
+.alert{background:var(--hull);border-top:2px solid var(--signal);color:#fff}
+.alert-in{max-width:var(--wrap);margin:0 auto;padding:26px 28px;display:grid;grid-template-columns:1fr auto;gap:28px;align-items:center}
+.alert-tag{font-family:var(--mono);font-size:.68rem;letter-spacing:.2em;text-transform:uppercase;color:var(--signal);margin:0 0 10px}
+.alert h2{font-size:1.32rem;color:#fff;margin:0 0 10px;font-family:var(--body);font-weight:700;letter-spacing:0}
+.alert p{font-size:.93rem;color:rgba(255,255,255,.78);margin:0;max-width:70ch}
+.alert-act{display:flex;flex-direction:column;gap:10px;align-items:flex-start}
+.alert-act a.small{font-size:.82rem;color:var(--sea);text-decoration:underline}
+
+/* HERO */
+.hero{background:var(--navy);color:#fff;padding:96px 0 84px;position:relative;overflow:hidden}
+.hero:before{content:"";position:absolute;inset:0;background-image:linear-gradient(var(--line-dark) 1px,transparent 1px),linear-gradient(90deg,var(--line-dark) 1px,transparent 1px);background-size:76px 76px;opacity:.4}
+.hero:after{content:"";position:absolute;right:-16%;top:-30%;width:66%;height:150%;background:radial-gradient(closest-side,rgba(14,124,134,.4),transparent 72%)}
+.hero-in{position:relative;z-index:2;display:grid;grid-template-columns:1.05fr .95fr;gap:56px;align-items:center}
+.hero-fig{margin:0;position:relative}
+.hero-fig img{width:100%;height:auto;border:1px solid var(--line-dark)}
+.hero-fig:after{content:"";position:absolute;inset:0;background:linear-gradient(100deg,rgba(11,34,51,.34),transparent 46%);pointer-events:none}
+.hero h1{font-size:clamp(2.2rem,5.4vw,3.55rem);color:#fff;margin-bottom:22px}
+.hero p.lede{font-size:1.14rem;color:rgba(255,255,255,.82);max-width:64ch;margin-bottom:32px}
+.hero-btns{display:flex;gap:14px;flex-wrap:wrap}
+
+/* LEDGER (signature) */
+.ledger{background:var(--grey-2);border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:52px 0}
+.ledger-box{border:1px solid var(--line);background:#fff}
+.ledger-head{display:flex;justify-content:space-between;align-items:center;gap:16px;padding:14px 22px;border-bottom:1px solid var(--line);flex-wrap:wrap}
+.ledger-head span{font-family:var(--mono);font-size:.68rem;letter-spacing:.18em;text-transform:uppercase;color:var(--sea)}
+.clock{display:flex;flex-wrap:wrap;padding:26px 22px 8px;gap:0}
+.unit{padding:0 30px 18px 0;margin-right:30px;border-right:1px solid var(--line)}
+.unit:last-child{border-right:none}
+.unit b{display:block;font-family:var(--mono);font-size:clamp(2rem,5vw,3.1rem);font-weight:500;line-height:1;color:var(--navy);font-variant-numeric:tabular-nums}
+.unit i{display:block;font-family:var(--mono);font-style:normal;font-size:.66rem;letter-spacing:.2em;text-transform:uppercase;color:var(--sea);margin-top:9px}
+.track{padding:6px 22px 22px}
+.track-bar{height:5px;background:var(--grey);position:relative;overflow:hidden}
+.track-fill{position:absolute;left:0;top:0;bottom:0;background:var(--teal);width:0;transition:width 1.1s ease}
+.track-ends{display:flex;justify-content:space-between;font-family:var(--mono);font-size:.66rem;letter-spacing:.1em;text-transform:uppercase;color:var(--sea);margin-top:9px}
+.ledger-note{padding:16px 22px;border-top:1px solid var(--line);font-size:.86rem;color:#4a6377;margin:0}
+.in-effect{padding:34px 22px}
+.in-effect h3{margin-bottom:12px}
+
+/* DIVISIONS */
+.divisions{display:grid;grid-template-columns:1fr 1fr;gap:26px;margin-top:44px}
+.div-card{border:1px solid var(--line);padding:34px;background:#fff;display:flex;flex-direction:column}
+.div-card .eyebrow{color:var(--teal)}
+.div-list{list-style:none;padding:0;margin:0 0 26px}
+.div-list li{padding:9px 0 9px 22px;border-bottom:1px solid var(--line);font-size:.92rem;position:relative}
+.div-list li:before{content:"";position:absolute;left:0;top:18px;width:9px;height:1px;background:var(--teal)}
+.scope{font-size:.82rem;color:#4a6377;border-left:2px solid var(--signal);padding-left:14px;margin:0 0 24px}
+.div-card .btn{align-self:flex-start;margin-top:auto}
+
+/* PILLARS */
+.dark{background:var(--navy);color:#fff}
+.dark h2,.dark h3{color:#fff}
+.dark p{color:rgba(255,255,255,.78)}
+.pillars{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--line-dark);margin-top:44px;border:1px solid var(--line-dark)}
+.pillar{background:var(--navy);padding:28px}
+.pillar h3{font-size:1.05rem;margin-bottom:10px;font-family:var(--body);font-weight:700;letter-spacing:0}
+.pillar p{font-size:.89rem;margin:0}
+
+/* CHECKER */
+.checker{border:1px solid var(--line);background:#fff;margin-top:36px}
+.q{padding:22px;border-bottom:1px solid var(--line);display:grid;grid-template-columns:1fr auto;gap:20px;align-items:center}
+.q p{margin:0;font-size:.96rem;max-width:62ch}
+.q .num{font-family:var(--mono);font-size:.68rem;color:var(--sea);letter-spacing:.16em;display:block;margin-bottom:7px}
+.opts{display:flex;gap:8px}
+.opts button{font-family:var(--mono);font-size:.7rem;letter-spacing:.1em;text-transform:uppercase;padding:9px 13px;border:1px solid var(--line);background:#fff;color:var(--navy);cursor:pointer;border-radius:2px}
+.opts button:hover{border-color:var(--teal)}
+.opts button[aria-pressed="true"]{background:var(--navy);color:#fff;border-color:var(--navy)}
+.result{padding:26px 22px;background:var(--grey-2)}
+.result p{margin:0 0 16px;font-size:.96rem}
+.result .flag{font-family:var(--mono);font-size:.68rem;letter-spacing:.18em;text-transform:uppercase;color:var(--signal);margin-bottom:10px}
+
+/* TILES */
+.tiles{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line);border:1px solid var(--line);margin-top:36px}
+.tile{background:#fff;padding:22px;font-size:.93rem;font-weight:500}
+
+/* PROCESS */
+.flow{display:flex;flex-wrap:wrap;gap:10px;align-items:center;margin:32px 0 28px}
+.step{font-family:var(--mono);font-size:.72rem;letter-spacing:.1em;text-transform:uppercase;padding:11px 15px;border:1px solid var(--line-dark);color:#fff}
+.arrow{color:var(--sea)}
+
+/* FEEDS */
+.feed{display:grid;grid-template-columns:repeat(2,1fr);gap:20px;margin-top:36px}
+.card{border:1px solid var(--line);padding:22px;background:#fff}
+.card h3{font-size:1.06rem;margin-bottom:12px;font-family:var(--body);font-weight:700;letter-spacing:0}
+.meta{font-family:var(--mono);font-size:.7rem;letter-spacing:.08em;color:var(--sea);text-transform:uppercase;margin-bottom:12px}
+.badge{display:inline-block;font-family:var(--mono);font-size:.64rem;letter-spacing:.14em;text-transform:uppercase;padding:4px 9px;border:1px solid var(--signal);color:var(--signal);margin-bottom:12px}
+.rowdata{display:grid;grid-template-columns:auto 1fr;gap:6px 16px;font-size:.85rem;margin:0 0 14px;padding:0}
+.rowdata dt{font-family:var(--mono);font-size:.68rem;letter-spacing:.1em;text-transform:uppercase;color:var(--sea)}
+.rowdata dd{margin:0}
+.empty{border:1px dashed var(--line);padding:38px 24px;text-align:center;background:var(--grey-2);margin-top:36px}
+.empty .meta{margin-bottom:14px}
+.source{font-size:.82rem}
+.commentary{border-left:2px solid var(--teal);padding-left:14px;font-size:.86rem;color:#4a6377;margin:14px 0 0}
+
+/* FORM */
+.form-grid{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-top:32px}
+label{display:block;font-family:var(--mono);font-size:.68rem;letter-spacing:.14em;text-transform:uppercase;color:var(--sea);margin-bottom:7px}
+input,select,textarea{width:100%;padding:12px 13px;border:1px solid var(--line);border-radius:2px;font-family:var(--body);font-size:.95rem;background:#fff;color:var(--navy)}
+textarea{min-height:130px;resize:vertical}
+.full{grid-column:1/-1}
+.formnote{font-size:.82rem;color:#4a6377;margin-top:16px}
+.hp{position:absolute;left:-9999px}
+
+/* Direct contact strip */
+.reach{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line-dark);border:1px solid var(--line-dark);margin:32px 0 8px}
+.reach a{background:var(--navy);padding:22px;text-decoration:none;display:block;color:#fff}
+.reach a:hover{background:var(--hull)}
+.reach .k{font-family:var(--mono);font-size:.66rem;letter-spacing:.18em;text-transform:uppercase;color:var(--sea);display:block;margin-bottom:8px}
+.reach .v{font-size:1.02rem;font-weight:600;color:#fff;display:block;word-break:break-word}
+.reach .s{font-size:.8rem;color:rgba(255,255,255,.6);display:block;margin-top:5px}
+
+/* Sticky mobile action bar */
+.bar{display:none;position:fixed;left:0;right:0;bottom:0;z-index:70;background:var(--navy);border-top:1px solid var(--line-dark)}
+.bar a{flex:1;text-align:center;padding:14px 6px;color:#fff;text-decoration:none;font-size:.82rem;font-weight:600;font-family:var(--body);border-right:1px solid var(--line-dark)}
+.bar a:last-child{border-right:none;background:var(--teal)}
+.nav-call{font-family:var(--mono);font-size:.82rem!important;color:#fff!important;white-space:nowrap}
+
+/* FOOTER */
+footer{background:var(--navy);color:rgba(255,255,255,.72);padding:66px 0 34px;font-size:.9rem}
+.fgrid{display:grid;grid-template-columns:2fr 1fr 1fr;gap:40px}
+footer h4{font-family:var(--mono);font-size:.68rem;letter-spacing:.18em;text-transform:uppercase;color:#fff;margin:0 0 16px}
+footer ul{list-style:none;padding:0;margin:0}
+footer li{margin-bottom:9px}
+footer a{color:rgba(255,255,255,.72);text-decoration:none}
+footer a:hover{color:#fff}
+.disclaim{border-top:1px solid var(--line-dark);margin-top:44px;padding-top:26px;font-size:.82rem;line-height:1.7}
+.disclaim strong{color:#fff;display:block;margin-bottom:10px;font-weight:600}
+
+@media(max-width:940px){
+  .divisions,.feed,.form-grid,.fgrid,.hero-in{grid-template-columns:1fr}
+  .hero-fig{order:-1}
+  .pillars,.tiles{grid-template-columns:1fr 1fr}
+  .alert-in{grid-template-columns:1fr}
+  .nav-links{display:none;position:absolute;top:100%;left:0;right:0;background:var(--navy);flex-direction:column;align-items:flex-start;padding:20px 28px;gap:16px;border-bottom:1px solid var(--line-dark)}
+  .nav-links.open{display:flex}
+  .burger{display:block}
+  .q{grid-template-columns:1fr}
+  section{padding:64px 0}
+  .reach{grid-template-columns:1fr}
+  .bar{display:flex}
+  body{padding-bottom:54px}
+}
+@media(max-width:560px){
+  .pillars,.tiles{grid-template-columns:1fr}
+  .unit{padding-right:18px;margin-right:18px}
+}
+@media(prefers-reduced-motion:reduce){
+  *{transition:none!important;animation:none!important}
+  html{scroll-behavior:auto}
+}
+</style>
+<style>
+.article{max-width:760px;margin:0 auto;padding:0 28px}
+.article h2{font-size:clamp(1.3rem,2.6vw,1.7rem);margin-top:40px}
+.article p,.article li{font-size:1rem}
+.article ul{padding-left:20px}
+.article li{margin-bottom:9px}
+</style>
+</head>
+<body>
+<header class="nav">
+  <div class="nav-in">
+    <a class="brand" href="index.html">Cayman Bid &amp; Compliance Services<span>Cayman Bid Desk</span></a>
+    <button class="burger" id="burger" aria-expanded="false" aria-controls="navlinks">Menu</button>
+    <nav class="nav-links" id="navlinks">
+      <a href="index.html#compliance">Compliance</a>
+      <a href="index.html#bid">Bid &amp; Tender Services</a>
+      <a href="index.html#regulatory">Regulatory Updates</a>
+      <a href="index.html#about">About</a>
+      <a class="nav-call" href="tel:+13433015061">+1 (343) 301-5061</a>
+      <a class="btn btn-teal" href="index.html#contact">Request a Consultation</a>
+    </nav>
+  </div>
+</header>
+<section style="padding:56px 0">
+  <div class="article">
+    <p class="eyebrow">Legal</p>
+    <h1 style="font-size:clamp(1.8rem,4vw,2.4rem)">Privacy policy</h1>
+    <p style="color:#4a6377">Last updated 12 August 2026</p>
+
+    <h2>Who we are</h2>
+    <p>Cayman Bid &amp; Compliance Services is a business name of ProRN Inc., a corporation registered in Ontario, Canada. We provide business documentation, procurement and compliance implementation support to organisations in the Cayman Islands.</p>
+
+    <h2>What we collect</h2>
+    <p>We collect only what you send us. Through the enquiry form that means your name, company, business email, telephone number, the service you selected, the deadline you entered and the message you wrote. Through the Procurement Watch signup it means your business email and your chosen industry. If you contact us by telephone, WhatsApp or email, we hold whatever you choose to tell us in that conversation.</p>
+    <p>We don't run advertising trackers or analytics profiling on this website. The site loads typefaces from Google Fonts, which means Google receives your IP address when a page loads, as it would on a large share of websites.</p>
+
+    <h2>Why we hold it</h2>
+    <p>To answer your enquiry, scope the work you asked about, prepare a quotation and deliver a project if you engage us. Procurement Watch addresses are used to send opportunity notices in the industry you selected. We don't sell your information, we don't share it for marketing, and we don't add you to any list you didn't ask to join.</p>
+
+    <h2>Form handling</h2>
+    <p>Enquiry forms on this site are processed by FormSubmit, a third party service that relays form contents to our email address. Information you type into a form passes through that service. Please don't submit confidential client documents, tender packages or personal data belonging to third parties through the web form. Tell us what you need and we will reply with a suitable method of sending files.</p>
+
+    <h2>How long we keep it</h2>
+    <p>Enquiries that don't become projects are held for up to twelve months and then deleted. Project records are held for seven years to meet Canadian record keeping and tax requirements. Procurement Watch addresses are held until you ask to be removed.</p>
+
+    <h2>Your rights</h2>
+    <p>You may ask what information we hold about you, ask us to correct it, or ask us to delete it. Contact us through the enquiry form or by telephone and we will respond within thirty days. As a Canadian corporation we handle personal information in line with the Personal Information Protection and Electronic Documents Act (PIPEDA).</p>
+
+    <h2>Changes</h2>
+    <p>If this policy changes, the revised version appears on this page with a new date at the top.</p>
+
+  </div>
+</section>
+<footer>
+  <div class="wrap">
+    <p style="margin:0 0 10px"><a href="index.html">Cayman Bid &amp; Compliance Services</a> · A business name of ProRN Inc. · Toronto, Ontario, Canada</p>
+    <p style="margin:0 0 10px"><a href="tel:+13433015061">+1 (343) 301-5061</a> · <a data-mailto href="index.html#contact">Email us</a> · <a href="privacy.html">Privacy</a> · <a href="terms.html">Terms</a></p>
+    <div class="disclaim"><p style="margin:0">&copy; <span id="yr"></span> ProRN Inc. All rights reserved.</p></div>
+  </div>
+</footer>
+<script>
+document.getElementById('yr').textContent = new Date().getFullYear();
+var burger=document.getElementById('burger'), links=document.getElementById('navlinks');
+burger.addEventListener('click',function(){var o=links.classList.toggle('open');burger.setAttribute('aria-expanded',o);});
+var USER=['pro','rn','inc'].join(''), HOST=['gm','ail','.com'].join('');
+var ADDR=USER+String.fromCharCode(64)+HOST;
+document.querySelectorAll('[data-mailto]').forEach(function(a){a.setAttribute('href','mailto:'+ADDR);});
+</script>
+</body>
+</html>
