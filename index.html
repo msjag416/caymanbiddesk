@@ -848,18 +848,24 @@ document.querySelectorAll('[data-mailto]').forEach(function(a){
   A.innerHTML = rowA + rowA + rowA;
   B.innerHTML = rowB + rowB + rowB + rowB;
   var still = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-  var ticking = false;
-  function move(){
-    ticking = false;
-    var y = window.scrollY || 0;
-    var startB = -B.scrollWidth / 2 + window.innerWidth / 2;
-    A.style.transform = 'translateX(' + (-y * 0.45) + 'px)';
-    B.style.transform = 'translateX(' + (startB + y * 0.45) + 'px)';
+  var SPEED = 0.05;            /* pixels per millisecond the words drift on their own */
+  var running = false;
+  function move(t){
+    var go = (t || 0) * SPEED + (window.scrollY || 0) * 0.45;
+    var setA = A.scrollWidth / 3, setB = B.scrollWidth / 4;   /* width of one copy of each row */
+    A.style.transform = 'translateX(' + (-(go % setA)) + 'px)';
+    B.style.transform = 'translateX(' + (-setB + (go % setB)) + 'px)';
   }
-  move();
+  function loop(t){ if (!running) return; move(t); requestAnimationFrame(loop); }
+  move(0);
   if (still) return;
-  window.addEventListener('scroll', function(){ if (!ticking){ ticking = true; requestAnimationFrame(move); } }, {passive:true});
-  window.addEventListener('resize', move);
+  var band = A.parentNode;
+  if ('IntersectionObserver' in window){
+    new IntersectionObserver(function(en){
+      if (en[0].isIntersecting){ if (!running){ running = true; requestAnimationFrame(loop); } }
+      else running = false;
+    }).observe(band);
+  } else { running = true; requestAnimationFrame(loop); }
 })();
 
 /* ---------- Living dot grid behind the hero (inspired by onepagelove.com/builders-table) ----------

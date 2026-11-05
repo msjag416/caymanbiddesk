@@ -62,7 +62,7 @@ Each package on the service pages shows "Fixed fee, quoted in writing". To show 
 
 ## Type wave (homepage)
 
-Right under the hero there's a dark band with two rows of very large words (inspired by onepagelove.com/typewave). As the visitor scrolls, the top row slides left and the bottom row slides right. The words live in the `rowA` and `rowB` lines of the "Type wave" script near the bottom of `index.html`; edit those to change them. Classes: `o` = outlined word, `t` = teal, `g` = gold. The band is hidden from screen readers and stays still for visitors who've turned off motion in their device settings. To remove it, delete the `<div class="wave">` block, the `TYPE WAVE` CSS and the "Type wave" script.
+Right under the hero there's a dark band with two rows of very large words (inspired by onepagelove.com/typewave). The rows drift on their own in a seamless loop, the top row to the left and the bottom row to the right, and they speed up while the visitor scrolls. `SPEED` in the script sets how fast they drift. It only runs while the band is on screen. The words live in the `rowA` and `rowB` lines of the "Type wave" script near the bottom of `index.html`; edit those to change them. Classes: `o` = outlined word, `t` = teal, `g` = gold. The band is hidden from screen readers and stays still for visitors who've turned off motion in their device settings. To remove it, delete the `<div class="wave">` block, the `TYPE WAVE` CSS and the "Type wave" script.
 
 ## Living dot grid (homepage hero)
 
