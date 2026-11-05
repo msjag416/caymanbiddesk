@@ -64,6 +64,10 @@ Each package on the service pages shows "Fixed fee, quoted in writing". To show 
 
 Right under the hero there's a dark band with two rows of very large words (inspired by onepagelove.com/typewave). As the visitor scrolls, the top row slides left and the bottom row slides right. The words live in the `rowA` and `rowB` lines of the "Type wave" script near the bottom of `index.html`; edit those to change them. Classes: `o` = outlined word, `t` = teal, `g` = gold. The band is hidden from screen readers and stays still for visitors who've turned off motion in their device settings. To remove it, delete the `<div class="wave">` block, the `TYPE WAVE` CSS and the "Type wave" script.
 
+## Living dot grid (homepage hero)
+
+The hero background is a grid of small square dots drawn by a short script ("Living dot grid" near the bottom of `index.html`), inspired by onepagelove.com/builders-table. On a computer, dots near the mouse grow and glow teal. On phones, a soft glow drifts slowly across the grid instead. It only runs while the hero is on screen, and it stays still for visitors who've turned off motion. `GAP` sets the dot spacing and `REACH` sets how wide the glow is. To remove it, delete that script; the hero falls back to plain navy.
+
 ## Things that update themselves
 
 - The footer year.
