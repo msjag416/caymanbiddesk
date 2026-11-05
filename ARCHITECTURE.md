@@ -53,7 +53,7 @@ The hero photo is served as WebP (`hero-photo.webp`, `hero-photo-sm.webp`) insid
 
 ## Founder photo
 
-In the homepage About section, find the comment marked `PHOTO:`. Upload the photo as `joanne-gomez.jpg` and replace the `JG` text inside `<figure class="founder-photo">` with the `<img>` tag shown in that comment.
+The About section shows `joanne-gomez.webp`, with `joanne-gomez.jpg` as the fallback (both 480x480). To change the photo, replace both files with the same names.
 
 ## Package prices
 

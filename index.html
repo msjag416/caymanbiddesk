@@ -122,8 +122,8 @@ section{padding:88px 0}
 
 /* FOUNDER */
 .founder{display:grid;grid-template-columns:220px 1fr;gap:36px;align-items:start;margin-top:28px}
-.founder-photo{margin:0;aspect-ratio:4/5;background:var(--navy);color:#fff;display:flex;align-items:center;justify-content:center;font-family:var(--display);font-size:3rem;border:1px solid var(--line)}
-.founder-photo img{width:100%;height:100%;object-fit:cover}
+.founder-photo{margin:0;aspect-ratio:1/1;overflow:hidden;background:var(--navy);color:#fff;display:flex;align-items:center;justify-content:center;font-family:var(--display);font-size:3rem;border:1px solid var(--line)}
+.founder-photo picture,.founder-photo img{display:block;width:100%;height:100%;object-fit:cover}
 .creds{display:flex;flex-wrap:wrap;gap:8px;margin:6px 0 22px;padding:0;list-style:none}
 .creds li{font-family:var(--mono);font-size:.68rem;letter-spacing:.1em;text-transform:uppercase;border:1px solid var(--line);padding:6px 10px;color:var(--hull)}
 @media(max-width:700px){.founder{grid-template-columns:1fr}.founder-photo{max-width:220px}}
@@ -528,9 +528,13 @@ footer a:hover{color:#fff}
     <p>Cayman Bid &amp; Compliance Services provides business documentation, procurement and compliance implementation support to Cayman Islands organisations. The work is research, documentation, coordination and completion, delivered against a fixed date.</p>
 
     <div class="founder">
-      <!-- PHOTO: replace the "JG" text below with
-           <img src="joanne-gomez.jpg" alt="JoAnne Gomez, RN, founder of Cayman Bid & Compliance Services" width="440" height="550"> -->
-      <figure class="founder-photo" aria-label="JoAnne Gomez">JG</figure>
+      <!-- Founder photo: joanne-gomez.webp with joanne-gomez.jpg fallback (480x480) -->
+      <figure class="founder-photo">
+        <picture>
+          <source type="image/webp" srcset="joanne-gomez.webp">
+          <img src="joanne-gomez.jpg" alt="JoAnne Gomez, RN, founder of Cayman Bid &amp; Compliance Services" width="480" height="480" loading="lazy" decoding="async">
+        </picture>
+      </figure>
       <div>
         <p class="eyebrow" style="margin-bottom:6px">Founder</p>
         <h3 style="margin-bottom:10px">JoAnne Gomez, RN</h3>
@@ -693,7 +697,7 @@ footer a:hover{color:#fff}
   "logo":"https://www.caymanbiddesk.com/apple-touch-icon.png",
   "description":"Bid, tender and compliance implementation support for Cayman Islands businesses, including requirement mapping, documentation, procurement response coordination and deadline project capacity.",
   "parentOrganization":{"@type":"Organization","name":"ProRN Inc."},
-  "founder":{"@type":"Person","name":"JoAnne Gomez","honorificSuffix":"RN","jobTitle":"Founder","sameAs":["https://www.linkedin.com/in/jag416"]},
+  "founder":{"@type":"Person","name":"JoAnne Gomez","image":"https://www.caymanbiddesk.com/joanne-gomez.jpg","honorificSuffix":"RN","jobTitle":"Founder","sameAs":["https://www.linkedin.com/in/jag416"]},
   "address":{"@type":"PostalAddress","addressLocality":"Toronto","addressRegion":"ON","addressCountry":"CA"},
   "areaServed":{"@type":"Country","name":"Cayman Islands"},
   "telephone":"+1-343-301-5061",
