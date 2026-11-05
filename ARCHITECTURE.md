@@ -60,6 +60,10 @@ The About section shows `joanne-gomez.webp`, with `joanne-gomez.jpg` as the fall
 
 Each package on the service pages shows "Fixed fee, quoted in writing". To show a price, edit the `pack-fee` line for that package.
 
+## Type wave (homepage)
+
+Right under the hero there's a dark band with two rows of very large words (inspired by onepagelove.com/typewave). As the visitor scrolls, the top row slides left and the bottom row slides right. The words live in the `rowA` and `rowB` lines of the "Type wave" script near the bottom of `index.html`; edit those to change them. Classes: `o` = outlined word, `t` = teal, `g` = gold. The band is hidden from screen readers and stays still for visitors who've turned off motion in their device settings. To remove it, delete the `<div class="wave">` block, the `TYPE WAVE` CSS and the "Type wave" script.
+
 ## Things that update themselves
 
 - The footer year.

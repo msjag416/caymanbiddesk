@@ -94,6 +94,15 @@ section{padding:88px 0}
 .hero p.lede{font-size:1.14rem;color:rgba(255,255,255,.82);max-width:64ch;margin-bottom:32px}
 .hero-btns{display:flex;gap:14px;flex-wrap:wrap}
 
+/* TYPE WAVE: big moving words under the hero, inspired by onepagelove.com/typewave */
+.wave{background:var(--navy);overflow:hidden;padding:18px 0 34px;border-top:1px solid var(--line-dark);position:relative}
+.wave-row{display:flex;white-space:nowrap;font-family:var(--display);font-weight:600;font-size:clamp(3.2rem,10.5vw,9rem);line-height:1.02;letter-spacing:-.025em;color:#fff;will-change:transform}
+.wave-row span{padding-right:.35em}
+.wave-row .o{color:transparent;-webkit-text-stroke:1.5px rgba(255,255,255,.38)}
+.wave-row .t{color:var(--teal)}
+.wave-row .g{color:var(--signal)}
+.wave-row .dot{color:var(--sea);padding-right:.35em}
+
 /* LEDGER (signature) */
 .ledger{background:var(--grey-2);border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:52px 0}
 .ledger-box{border:1px solid var(--line);background:#fff}
@@ -294,6 +303,12 @@ footer a:hover{color:#fff}
     </figure>
   </div>
 </section>
+
+<!-- TYPE WAVE: decorative moving words. Hidden from screen readers; the same steps are written out in the Bid Desk section. -->
+<div class="wave" aria-hidden="true">
+  <div class="wave-row" id="waveA"></div>
+  <div class="wave-row" id="waveB"></div>
+</div>
 
 <section id="compliance">
   <div class="wrap">
@@ -823,6 +838,29 @@ document.querySelectorAll('[data-mailto]').forEach(function(a){
   var subj = a.getAttribute('data-subject');
   a.setAttribute('href', 'mailto:' + ADDR + (subj ? '?subject=' + encodeURIComponent(subj) : ''));
 });
+
+/* ---------- Type wave: two rows of big words slide in opposite directions as you scroll ---------- */
+(function(){
+  var A = document.getElementById('waveA'), B = document.getElementById('waveB');
+  if (!A || !B) return;
+  var rowA = '<span>Opportunity</span><span class="dot">·</span><span class="o">Requirements</span><span class="dot">·</span><span class="t">Compliance matrix</span><span class="dot">·</span><span>Proposal</span><span class="dot">·</span><span class="o">Review</span><span class="dot">·</span><span class="g">Submitted</span><span class="dot">·</span>';
+  var rowB = '<span class="o">CIMA rules</span><span class="dot">·</span><span>Evidence</span><span class="dot">·</span><span class="t">Audit ready</span><span class="dot">·</span><span class="o">Tender</span><span class="dot">·</span><span>Deadline met</span><span class="dot">·</span>';
+  A.innerHTML = rowA + rowA + rowA;
+  B.innerHTML = rowB + rowB + rowB + rowB;
+  var still = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var ticking = false;
+  function move(){
+    ticking = false;
+    var y = window.scrollY || 0;
+    var startB = -B.scrollWidth / 2 + window.innerWidth / 2;
+    A.style.transform = 'translateX(' + (-y * 0.45) + 'px)';
+    B.style.transform = 'translateX(' + (startB + y * 0.45) + 'px)';
+  }
+  move();
+  if (still) return;
+  window.addEventListener('scroll', function(){ if (!ticking){ ticking = true; requestAnimationFrame(move); } }, {passive:true});
+  window.addEventListener('resize', move);
+})();
 
 /* ---------- Footer year ---------- */
 document.getElementById('yr').textContent = new Date().getFullYear();
