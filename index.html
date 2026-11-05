@@ -13,6 +13,8 @@
 <meta property="og:site_name" content="Cayman Bid Desk">
 <meta property="og:image" content="https://www.caymanbiddesk.com/og-image.jpg">
 <meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Cayman Bid Desk | Tender Support &amp; CIMA Compliance Services">
+<meta name="twitter:description" content="Bid preparation, tender coordination and CIMA AML and sanctions compliance documentation for Cayman Islands businesses.">
 <meta name="twitter:image" content="https://www.caymanbiddesk.com/og-image.jpg">
 <meta name="robots" content="index, follow">
 <link rel="icon" href="favicon.ico" sizes="any">
@@ -271,7 +273,7 @@ footer a:hover{color:#fff}
   <div class="wrap hero-in">
     <div>
     <p class="eyebrow">Cayman Islands · Bid, tender and compliance support</p>
-    <h1>Cayman business deadlines don't wait. Neither should your documentation.</h1>
+    <h1>Cayman tender support and CIMA compliance documentation, built around your deadline</h1>
     <p class="lede">Bid, tender and compliance implementation support for Cayman Islands businesses facing procurement requirements, regulatory obligations and fixed deadlines.</p>
     <div class="hero-btns">
       <a class="btn btn-teal" href="#contact">Request a Consultation</a>
@@ -423,7 +425,12 @@ footer a:hover{color:#fff}
     <p class="eyebrow">Cayman procurement watch</p>
     <h2>Where to find Cayman government procurement opportunities</h2>
     <p style="max-width:66ch">Where Cayman procurement is advertised, what the thresholds are, and how to get notices for your sector sent to you.</p>
-    <div id="oppFeed"></div>
+    <!-- Shown when OPPORTUNITIES is empty. Written into the page so every search engine can read it. -->
+    <div id="oppFeed">
+    <div class="empty" style="text-align:left">
+      <p class="meta">Where Cayman opportunities are published</p><p style="margin:0 0 14px;font-weight:600">Where to find Cayman government tenders, and how they work.</p><p style="margin:0 0 14px;font-size:.92rem;color:#4a6377">The Cayman Islands Government runs a competitive bid process governed by the Procurement Act (2023 Revision), the Procurement Regulations (2022 Revision), the Freedom of Information Act and Central Procurement Office policy. Government is required to advertise electronically where the expected value of a purchase is KY$100,000 or greater, which means opportunities above that threshold appear on the official portal. Purchases below it may never be advertised publicly at all.</p><p style="margin:0 0 18px;font-size:.92rem;color:#4a6377">Suppliers register once on the portal and then respond to individual notices there. Registration ahead of a deadline matters, because a first-time registration on the closing day is where submissions get lost.</p><p style="margin:0 0 20px"><a href="https://cayman.bonfirehub.com/portal/?tab=openOpportunities" target="_blank" rel="noopener">Open opportunities, official CIG portal</a><br><a href="https://cayman.bonfirehub.com/portal/?tab=pastOpportunities" target="_blank" rel="noopener">Past opportunities and awards</a><br><a href="https://www.procure.gov.ky/bid-opportunities" target="_blank" rel="noopener">Central Procurement Office, bid opportunities</a><br><a href="https://www.procure.gov.ky/procurement-plans" target="_blank" rel="noopener">Published procurement plans, what is coming next</a></p><p style="margin:0;font-size:.86rem;color:#4a6377">We publish individual notices here only once confirmed against the official source. Join the list below and we will send matches for your sector. New to CIG tenders? <a href="cayman-government-tender-guide.html">Read our guide to responding to a Cayman government tender</a>.</p>
+    </div>
+    </div>
 
     <div style="border:1px solid var(--line);padding:26px;margin-top:26px;background:var(--grey-2)">
       <h3 style="margin-bottom:10px">Want relevant opportunities sent to you?</h3>
@@ -706,6 +713,45 @@ footer a:hover{color:#fff}
 }
 </script>
 
+<script type="application/ld+json">
+[
+ {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "name": "CIMA AML & Sanctions Compliance Documentation Support",
+  "serviceType": "Compliance documentation support",
+  "description": "Rule gap mapping, audit and inspection evidence packs and remediation tracking for CIMA registered and licensed financial services providers.",
+  "url": "https://www.caymanbiddesk.com/compliance-support.html",
+  "provider": {
+   "@type": "ProfessionalService",
+   "name": "Cayman Bid & Compliance Services",
+   "url": "https://www.caymanbiddesk.com/"
+  },
+  "areaServed": {
+   "@type": "Country",
+   "name": "Cayman Islands"
+  }
+ },
+ {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "name": "Cayman Government Tender & RFP Response Support",
+  "serviceType": "Bid and tender support",
+  "description": "Tender review, compliance matrices, bid coordination and submission readiness checks for Cayman Islands Government tenders and private sector RFPs.",
+  "url": "https://www.caymanbiddesk.com/tender-support.html",
+  "provider": {
+   "@type": "ProfessionalService",
+   "name": "Cayman Bid & Compliance Services",
+   "url": "https://www.caymanbiddesk.com/"
+  },
+  "areaServed": {
+   "@type": "Country",
+   "name": "Cayman Islands"
+  }
+ }
+]
+</script>
+
 <script>
 /* ---------- Email assembly ----------
    The address is never written into the HTML source. It is rebuilt in the
@@ -840,21 +886,7 @@ var OPPORTUNITIES = [
 
 function renderOpps(){
   var host = document.getElementById('oppFeed');
-  if (!OPPORTUNITIES.length){
-    host.innerHTML =
-      '<div class="empty" style="text-align:left">' +
-      '<p class="meta">Where Cayman opportunities are published</p>' +
-      '<p style="margin:0 0 14px;font-weight:600">Where to find Cayman government tenders, and how they work.</p>' +
-      '<p style="margin:0 0 14px;font-size:.92rem;color:#4a6377">The Cayman Islands Government runs a competitive bid process governed by the Procurement Act 2016, the Procurement Regulations 2018, the Freedom of Information Act and Central Procurement Office policy. Government is required to advertise electronically where the expected value of a purchase is KY$100,000 or greater, which means opportunities above that threshold appear on the official portal. Purchases below it may never be advertised publicly at all.</p>' +
-      '<p style="margin:0 0 18px;font-size:.92rem;color:#4a6377">Suppliers register once on the portal and then respond to individual notices there. Registration ahead of a deadline matters, because a first-time registration on the closing day is where submissions get lost.</p>' +
-      '<p style="margin:0 0 20px"><a href="https://cayman.bonfirehub.com/portal/?tab=openOpportunities" target="_blank" rel="noopener">Open opportunities, official CIG portal</a><br>' +
-      '<a href="https://cayman.bonfirehub.com/portal/?tab=pastOpportunities" target="_blank" rel="noopener">Past opportunities and awards</a><br>' +
-      '<a href="https://www.procure.gov.ky/bid-opportunities" target="_blank" rel="noopener">Central Procurement Office, bid opportunities</a><br>' +
-      '<a href="https://www.procure.gov.ky/procurement-plans" target="_blank" rel="noopener">Published procurement plans, what is coming next</a></p>' +
-      '<p style="margin:0;font-size:.86rem;color:#4a6377">We publish individual notices here only once confirmed against the official source. Join the list below and we will send matches for your sector. New to CIG tenders? <a href="cayman-government-tender-guide.html">Read our guide to responding to a Cayman government tender</a>.</p>' +
-      '</div>';
-    return;
-  }
+  if (!OPPORTUNITIES.length) return; /* keep the built-in HTML panel */
   var html = '<div class="feed">';
   OPPORTUNITIES.forEach(function(o){
     var days = Math.ceil((new Date(o.closes + 'T00:00:00-05:00') - Date.now()) / 86400000);

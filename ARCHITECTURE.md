@@ -33,7 +33,8 @@ To change the address, edit those two lines on every HTML page. Links marked `da
 
 - Each page has a `<title>`, a meta description (keep under 155 characters), a canonical link and Open Graph tags.
 - Structured data (JSON-LD, near the bottom of each page):
-  - Homepage: `FAQPage` (must match the visible FAQ) and `ProfessionalService`
+  - Homepage: `FAQPage` (must match the visible FAQ), `ProfessionalService`, and `Service` for the two divisions
+  - Every page except the homepage: `BreadcrumbList` (Home > page)
   - Articles/guides: `Article`; the tender guide also has `FAQPage`
   - Service pages: `Service` and `FAQPage`
   - The homepage `ProfessionalService` block names JoAnne Gomez as founder
@@ -62,4 +63,4 @@ Each package on the service pages shows "Fixed fee, quoted in writing". To show 
 ## Things that update themselves
 
 - The footer year.
-- Procurement Watch shows the `OPPORTUNITIES` list in the homepage script; empty shows the "where to look" panel.
+- Procurement Watch: the "where to look" panel is written directly in the HTML so all search engines can read it. If the `OPPORTUNITIES` list in the homepage script has entries, the script replaces the panel with those cards.
