@@ -120,6 +120,14 @@ section{padding:88px 0}
 .scope{font-size:.82rem;color:#4a6377;border-left:2px solid var(--signal);padding-left:14px;margin:0 0 24px}
 .div-card .btn{align-self:flex-start;margin-top:auto}
 
+/* FOUNDER */
+.founder{display:grid;grid-template-columns:220px 1fr;gap:36px;align-items:start;margin-top:28px}
+.founder-photo{margin:0;aspect-ratio:4/5;background:var(--navy);color:#fff;display:flex;align-items:center;justify-content:center;font-family:var(--display);font-size:3rem;border:1px solid var(--line)}
+.founder-photo img{width:100%;height:100%;object-fit:cover}
+.creds{display:flex;flex-wrap:wrap;gap:8px;margin:6px 0 22px;padding:0;list-style:none}
+.creds li{font-family:var(--mono);font-size:.68rem;letter-spacing:.1em;text-transform:uppercase;border:1px solid var(--line);padding:6px 10px;color:var(--hull)}
+@media(max-width:700px){.founder{grid-template-columns:1fr}.founder-photo{max-width:220px}}
+
 /* PILLARS */
 .dark{background:var(--navy);color:#fff}
 .dark h2,.dark h3{color:#fff}
@@ -230,8 +238,8 @@ footer a:hover{color:#fff}
     <a class="brand" href="#top">Cayman Bid &amp; Compliance Services<span>Cayman Bid Desk</span></a>
     <button class="burger" id="burger" aria-expanded="false" aria-controls="navlinks">Menu</button>
     <nav class="nav-links" id="navlinks">
-      <a href="#compliance">Compliance</a>
-      <a href="#bid">Bid &amp; Tender Services</a>
+      <a href="compliance-support.html">Compliance</a>
+      <a href="tender-support.html">Bid &amp; Tender Services</a>
       <a href="#regulatory">Regulatory Updates</a>
       <a href="#about">About</a>
       <a href="#contact">Contact</a>
@@ -253,7 +261,7 @@ footer a:hover{color:#fff}
       <p id="alertBody">CIMA's Rule on Effective Compliance Programme for the Prevention and Detection of Money Laundering, Terrorist Financing and Proliferation Financing, and its Rule on Compliance with Financial Sanctions and Targeted Financial Sanctions, took effect on Friday, 18 September 2026. Both were published on 20 July 2026 and apply to CIMA registered and licensed financial services providers.</p>
     </div>
     <div class="alert-act">
-      <a class="btn btn-teal" href="#readiness">Check your implementation readiness</a>
+      <a class="btn btn-teal" href="#readiness">Check your audit and inspection readiness</a>
       <a class="small" href="https://www.cima.ky/aml-cft-faqs" target="_blank" rel="noopener">Read the CIMA requirements</a>
     </div>
   </div>
@@ -285,35 +293,6 @@ footer a:hover{color:#fff}
   </div>
 </section>
 
-<!-- ============ DEADLINE LEDGER (auto-switches after 18 Sept 2026) ============ -->
-<div class="ledger">
-  <div class="wrap">
-    <div class="ledger-box">
-      <div class="ledger-head">
-        <span id="ledgerLabel">CIMA rules effective in</span>
-        <span>Gazetted 20 July 2026 · In force 18 September 2026</span>
-      </div>
-      <div id="counting">
-        <div class="clock">
-          <div class="unit"><b id="dd">&nbsp;</b><i>Days</i></div>
-          <div class="unit"><b id="hh">&nbsp;</b><i>Hours</i></div>
-          <div class="unit"><b id="mm">&nbsp;</b><i>Minutes</i></div>
-          <div class="unit"><b id="ss">&nbsp;</b><i>Seconds</i></div>
-        </div>
-        <div class="track">
-          <div class="track-bar"><div class="track-fill" id="fill"></div></div>
-          <div class="track-ends"><span>Publication 20 Jul</span><span id="pct">0%</span><span>In force 18 Sep</span></div>
-        </div>
-        <p class="ledger-note">Both rules are in force from Friday, 18 September 2026, sixty days after publication in the Gazette on 20 July 2026.</p>
-      </div>
-      <!-- The "now in effect" panel is created by JavaScript on 18 September 2026.
-           It is deliberately not written into this file, so nothing can read it as
-           current before that date. -->
-
-    </div>
-  </div>
-</div>
-
 <section id="compliance">
   <div class="wrap">
     <p class="eyebrow">Two core divisions</p>
@@ -337,7 +316,7 @@ footer a:hover{color:#fff}
           <li>Temporary project capacity for compliance teams</li>
         </ul>
         <p class="scope">Regulatory interpretation, certification, audit and professional sign-off remain with your appropriately qualified compliance, legal or regulatory advisers. We do not act as AMLCO, MLRO or DMLRO.</p>
-        <a class="btn btn-out" href="#contact">Explore compliance support</a>
+        <a class="btn btn-out" href="compliance-support.html">See compliance support packages</a>
       </div>
 
       <div class="div-card" id="bid">
@@ -356,7 +335,7 @@ footer a:hover{color:#fff}
           <li>Government procurement and private RFP support</li>
         </ul>
         <p class="scope">Procurement decisions rest entirely with the buyer. We improve the organisation and preparation of a submission. We never guarantee an award.</p>
-        <a class="btn btn-out" href="#contact">Explore bid support</a>
+        <a class="btn btn-out" href="tender-support.html">See tender support packages</a>
       </div>
     </div>
   </div>
@@ -378,20 +357,20 @@ footer a:hover{color:#fff}
 
 <section id="readiness" style="background:var(--grey-2)">
   <div class="wrap">
-    <p class="eyebrow">Implementation readiness</p>
-    <h2>CIMA AML and sanctions rules: is your implementation evidence ready?</h2>
-    <p style="max-width:66ch">Five questions about documentation status. This is not a compliance assessment and produces no finding about your regulatory position.</p>
+    <p class="eyebrow">Audit and inspection readiness</p>
+    <h2>Could you produce your CIMA compliance evidence today?</h2>
+    <p style="max-width:66ch">Your independent AML audit and any CIMA inspection will ask to see records, not intentions. Five questions about whether yours are ready. This is not a compliance assessment and produces no finding about your regulatory position.</p>
 
     <div class="checker" id="checker">
-      <div class="q" data-q="1"><p><span class="num">Question 01</span>Have the new CIMA requirements been mapped against your existing compliance programme?</p><div class="opts"><button type="button" data-v="yes">Yes</button><button type="button" data-v="no">No</button><button type="button" data-v="unsure">Unsure</button></div></div>
-      <div class="q" data-q="2"><p><span class="num">Question 02</span>Have required policies, procedures and controls been reviewed against the new rules?</p><div class="opts"><button type="button" data-v="yes">Yes</button><button type="button" data-v="no">No</button><button type="button" data-v="unsure">Unsure</button></div></div>
-      <div class="q" data-q="3"><p><span class="num">Question 03</span>Is evidence of implementation organised and readily available?</p><div class="opts"><button type="button" data-v="yes">Yes</button><button type="button" data-v="no">No</button><button type="button" data-v="unsure">Unsure</button></div></div>
-      <div class="q" data-q="4"><p><span class="num">Question 04</span>Are remediation items documented, assigned and tracked?</p><div class="opts"><button type="button" data-v="yes">Yes</button><button type="button" data-v="no">No</button><button type="button" data-v="unsure">Unsure</button></div></div>
-      <div class="q" data-q="5"><p><span class="num">Question 05</span>Has your financial sanctions framework been reviewed against the new requirements?</p><div class="opts"><button type="button" data-v="yes">Yes</button><button type="button" data-v="no">No</button><button type="button" data-v="unsure">Unsure</button></div></div>
+      <div class="q" data-q="1"><p><span class="num">Question 01</span>Have the CIMA AML and sanctions rules been mapped against your current policies and procedures, with the mapping written down?</p><div class="opts"><button type="button" data-v="yes">Yes</button><button type="button" data-v="no">No</button><button type="button" data-v="unsure">Unsure</button></div></div>
+      <div class="q" data-q="2"><p><span class="num">Question 02</span>Is your independent AML auditor documented as independent of your compliance programme?</p><div class="opts"><button type="button" data-v="yes">Yes</button><button type="button" data-v="no">No</button><button type="button" data-v="unsure">Unsure</button></div></div>
+      <div class="q" data-q="3"><p><span class="num">Question 03</span>Is your audit frequency recorded, with the risk-based reasoning behind it?</p><div class="opts"><button type="button" data-v="yes">Yes</button><button type="button" data-v="no">No</button><button type="button" data-v="unsure">Unsure</button></div></div>
+      <div class="q" data-q="4"><p><span class="num">Question 04</span>Are remediation items documented, assigned to an owner and tracked to closure?</p><div class="opts"><button type="button" data-v="yes">Yes</button><button type="button" data-v="no">No</button><button type="button" data-v="unsure">Unsure</button></div></div>
+      <div class="q" data-q="5"><p><span class="num">Question 05</span>Do board minutes show compliance reporting was received, reviewed and acted on?</p><div class="opts"><button type="button" data-v="yes">Yes</button><button type="button" data-v="no">No</button><button type="button" data-v="unsure">Unsure</button></div></div>
       <div class="result" id="result" hidden>
         <p class="flag" id="resultFlag">Response summary</p>
-        <p id="resultText">Your responses may indicate areas worth reviewing now that the rules are in force.</p>
-        <a class="btn btn-navy" href="#contact">Request an implementation review</a>
+        <p id="resultText">Your responses may indicate records worth organising before your next audit or inspection.</p>
+        <a class="btn btn-navy" href="compliance-support.html">See the Audit and Inspection Evidence Pack</a>
       </div>
     </div>
   </div>
@@ -429,7 +408,7 @@ footer a:hover{color:#fff}
       <span class="step">Review</span><span class="arrow">→</span>
       <span class="step">Submission</span>
     </div>
-    <a class="btn btn-teal" href="#contact">Have a tender? Tell us about it</a>
+    <a class="btn btn-teal" href="tender-support.html">See tender support packages</a>
   </div>
 </section>
 
@@ -442,8 +421,8 @@ footer a:hover{color:#fff}
 <section id="procurement">
   <div class="wrap">
     <p class="eyebrow">Cayman procurement watch</p>
-    <h2>Cayman government procurement opportunities</h2>
-    <p style="max-width:66ch">Where Cayman procurement is advertised, what the thresholds are, and which notices are open now. We list individual opportunities only when confirmed against the official source.</p>
+    <h2>Where to find Cayman government procurement opportunities</h2>
+    <p style="max-width:66ch">Where Cayman procurement is advertised, what the thresholds are, and how to get notices for your sector sent to you.</p>
     <div id="oppFeed"></div>
 
     <div style="border:1px solid var(--line);padding:26px;margin-top:26px;background:var(--grey-2)">
@@ -547,6 +526,27 @@ footer a:hover{color:#fff}
     <p class="eyebrow">About</p>
     <h2>Built for deadline driven work</h2>
     <p>Cayman Bid &amp; Compliance Services provides business documentation, procurement and compliance implementation support to Cayman Islands organisations. The work is research, documentation, coordination and completion, delivered against a fixed date.</p>
+
+    <div class="founder">
+      <!-- PHOTO: replace the "JG" text below with
+           <img src="joanne-gomez.jpg" alt="JoAnne Gomez, RN, founder of Cayman Bid & Compliance Services" width="440" height="550"> -->
+      <figure class="founder-photo" aria-label="JoAnne Gomez">JG</figure>
+      <div>
+        <p class="eyebrow" style="margin-bottom:6px">Founder</p>
+        <h3 style="margin-bottom:10px">JoAnne Gomez, RN</h3>
+        <ul class="creds">
+          <li>27+ years critical care</li>
+          <li>ICU nurse, HSA Grand Cayman</li>
+          <li>Legal nurse consulting</li>
+          <li>BA Psychology &amp; English</li>
+        </ul>
+        <p>Cayman Bid &amp; Compliance Services was founded by JoAnne Gomez, a Registered Nurse with more than 27 years in critical care. She worked as an ICU nurse at the Health Services Authority in Grand Cayman and visits the island regularly for business.</p>
+        <p>Intensive care runs on documentation. Every assessment, order and handover has to be complete, accurate and ready for review at any hour, and nothing gets signed off from memory. JoAnne brings that same discipline to compliance evidence and tender submissions: every requirement listed, every document accounted for, every deadline met.</p>
+        <p>Through her consulting company, ProRN Inc., her work has included legal nurse consulting, where records are reviewed line by line against a standard, along with clinical data quality work, healthcare policy consulting on staffing and agency spending, and healthcare content writing for MedTech companies and clinical publishers. She holds a dual BA in Psychology and English from the University of Nebraska and is the author of two published books.</p>
+        <p style="margin:0"><a href="https://www.linkedin.com/in/jag416" target="_blank" rel="noopener">Connect with JoAnne on LinkedIn</a></p>
+      </div>
+    </div>
+    <p style="margin-top:32px"></p>
     <p>We are not a law firm, an accounting firm, a regulator, or a substitute for your regulated compliance professionals. Where specialist regulatory interpretation, legal advice, certification, audit or professional sign off is required, that responsibility stays with your qualified advisers.</p>
     <p style="border-left:2px solid var(--teal);padding-left:16px;font-size:.94rem"><strong>Cayman Bid &amp; Compliance Services is a business name of ProRN Inc., an Ontario corporation.</strong> Services are delivered to Cayman Islands businesses remotely and on project.</p>
 
@@ -628,7 +628,7 @@ footer a:hover{color:#fff}
       <div>
         <h4>Cayman Bid &amp; Compliance Services</h4>
         <p style="margin-bottom:10px">A business name of ProRN Inc.<br>Toronto, Ontario, Canada</p>
-        <p style="margin:0 0 16px">Serving Cayman Islands businesses remotely and on project.</p>
+        <p style="margin:0 0 16px">Founded by JoAnne Gomez, RN, a former ICU nurse at the Health Services Authority, Grand Cayman, and a regular business visitor to the island. Serving Cayman Islands businesses remotely, on project and in person.</p>
         <p style="margin:0"><a href="tel:+13433015061">+1 (343) 301-5061</a><br>
         <a href="https://wa.me/13433015061?text=Hi%2C%20I%27m%20enquiring%20about%20bid%20and%20compliance%20support%20for%20a%20Cayman%20deadline." target="_blank" rel="noopener">WhatsApp</a><br>
         <a data-mailto href="#contact">Email us</a></p>
@@ -636,8 +636,9 @@ footer a:hover{color:#fff}
       <div>
         <h4>Services</h4>
         <ul>
-          <li><a href="#compliance">Compliance implementation</a></li>
-          <li><a href="#bid">Bid and tender support</a></li>
+          <li><a href="compliance-support.html">Compliance support packages</a></li>
+          <li><a href="tender-support.html">Tender support packages</a></li>
+          <li><a href="cayman-government-tender-guide.html">Cayman tender guide</a></li>
           <li><a href="#procurement">Procurement Watch</a></li>
           <li><a href="#regulatory">Regulatory Watch</a></li>
           <li><a href="#news">Latest news</a></li>
@@ -692,6 +693,7 @@ footer a:hover{color:#fff}
   "logo":"https://www.caymanbiddesk.com/apple-touch-icon.png",
   "description":"Bid, tender and compliance implementation support for Cayman Islands businesses, including requirement mapping, documentation, procurement response coordination and deadline project capacity.",
   "parentOrganization":{"@type":"Organization","name":"ProRN Inc."},
+  "founder":{"@type":"Person","name":"JoAnne Gomez","honorificSuffix":"RN","jobTitle":"Founder","sameAs":["https://www.linkedin.com/in/jag416"]},
   "address":{"@type":"PostalAddress","addressLocality":"Toronto","addressRegion":"ON","addressCountry":"CA"},
   "areaServed":{"@type":"Country","name":"Cayman Islands"},
   "telephone":"+1-343-301-5061",
@@ -783,42 +785,6 @@ burger.addEventListener('click', function(){
 });
 links.addEventListener('click', function(e){ if(e.target.tagName === 'A') links.classList.remove('open'); });
 
-/* ---------- Deadline ledger ----------
-   Cayman Islands is UTC-5 year round (no daylight saving).       */
-var GAZETTE = new Date('2026-07-20T00:00:00-05:00').getTime();
-var EFFECT  = new Date('2026-09-18T00:00:00-05:00').getTime();
-
-function pad(n){ return n < 10 ? '0' + n : '' + n; }
-
-function tick(){
-  var now = Date.now(), left = EFFECT - now;
-
-  if (left <= 0){
-    var box = document.getElementById('counting');
-    box.innerHTML =
-      '<div class="in-effect">' +
-      '<h3>The new CIMA rules are now in effect</h3>' +
-      '<p style="margin-bottom:20px">Both rules are in force. Implementation evidence, documentation and remediation records may now be subject to review.</p>' +
-      '<a class="btn btn-navy" href="#readiness">Review your implementation status</a>' +
-      '</div>';
-    document.getElementById('ledgerLabel').textContent = 'Now in effect';
-    document.getElementById('alertTag').textContent = 'Regulatory update | Now in effect';
-    document.getElementById('alertBody').textContent =
-      document.getElementById('alertBody').textContent.replace('take effect on', 'took effect on');
-    return;
-  }
-
-  document.getElementById('dd').textContent = pad(Math.floor(left / 86400000));
-  document.getElementById('hh').textContent = pad(Math.floor(left / 3600000) % 24);
-  document.getElementById('mm').textContent = pad(Math.floor(left / 60000) % 60);
-  document.getElementById('ss').textContent = pad(Math.floor(left / 1000) % 60);
-
-  var pct = Math.min(100, Math.max(0, ((now - GAZETTE) / (EFFECT - GAZETTE)) * 100));
-  document.getElementById('fill').style.width = pct.toFixed(1) + '%';
-  document.getElementById('pct').textContent = Math.round(pct) + '% elapsed';
-}
-tick();
-setInterval(tick, 1000);
 
 /* ---------- Readiness checker ---------- */
 var answers = {};
@@ -842,8 +808,8 @@ function showResult(){
     ? 'All five areas marked complete'
     : open + ' of 5 areas marked incomplete or unconfirmed';
   document.getElementById('resultText').textContent = open === 0
-    ? 'Your responses indicate documentation work has been addressed in all five areas. A review may still be worthwhile to confirm evidence is organised and retrievable if CIMA asks for it.'
-    : 'Your responses may indicate areas worth reviewing now that the rules are in force.';
+    ? 'Your responses indicate documentation work has been addressed in all five areas. A quick evidence check may still be worthwhile to confirm everything can be found quickly when an auditor or CIMA asks.'
+    : 'Your responses may indicate records worth organising before your next audit or inspection.';
   box.hidden = false;
   box.scrollIntoView({ behavior:'smooth', block:'nearest' });
 }
@@ -874,7 +840,7 @@ function renderOpps(){
     host.innerHTML =
       '<div class="empty" style="text-align:left">' +
       '<p class="meta">Where Cayman opportunities are published</p>' +
-      '<p style="margin:0 0 14px;font-weight:600">No individual notices are listed here yet. Here is where to look in the meantime.</p>' +
+      '<p style="margin:0 0 14px;font-weight:600">Where to find Cayman government tenders, and how they work.</p>' +
       '<p style="margin:0 0 14px;font-size:.92rem;color:#4a6377">The Cayman Islands Government runs a competitive bid process governed by the Procurement Act 2016, the Procurement Regulations 2018, the Freedom of Information Act and Central Procurement Office policy. Government is required to advertise electronically where the expected value of a purchase is KY$100,000 or greater, which means opportunities above that threshold appear on the official portal. Purchases below it may never be advertised publicly at all.</p>' +
       '<p style="margin:0 0 18px;font-size:.92rem;color:#4a6377">Suppliers register once on the portal and then respond to individual notices there. Registration ahead of a deadline matters, because a first-time registration on the closing day is where submissions get lost.</p>' +
       '<p style="margin:0 0 20px"><a href="https://cayman.bonfirehub.com/portal/?tab=openOpportunities" target="_blank" rel="noopener">Open opportunities, official CIG portal</a><br>' +

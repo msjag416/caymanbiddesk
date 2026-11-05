@@ -6,11 +6,15 @@ A plain static website. No build step, no framework, no database. GitHub Pages s
 
 | File | What it is |
 |---|---|
-| `index.html` | Homepage: services, readiness checker, Procurement Watch, Regulatory Watch, guides, FAQ, contact form |
+| `index.html` | Homepage: services overview, audit and inspection readiness checker, Procurement Watch, Regulatory Watch, guides, About (founder bio), FAQ, contact form |
+| `compliance-support.html` | Service page for CIMA compliance teams: three packages, how it works, FAQ |
+| `tender-support.html` | Service page for tender bidders: three packages, how it works, FAQ |
 | `cayman-government-tender-guide.html` | Guide: how to respond to a Cayman Islands Government tender |
 | `cima-aml-audit-independence.html` | Analysis: who can audit your AML programme under the new CIMA rule |
 | `privacy.html`, `terms.html` | Legal pages |
-| `cima-aml-audit-checklist.pdf` | Free one-page download, linked from the homepage and the CIMA article |
+| `cima-aml-audit-checklist.pdf` | Free one-page download, linked from the homepage, the CIMA article and the compliance page |
+| `sample-cima-evidence-tracker.pdf` | Sample deliverable (fictional entity), linked from the compliance page |
+| `sample-tender-compliance-matrix.pdf` | Sample deliverable (fictional tender), linked from the tender page |
 
 Each page has its own CSS inside a `<style>` tag in its `<head>`, and its own small script at the bottom.
 
@@ -23,7 +27,7 @@ var USER = ['con','tact'].join('');
 var HOST = ['caymanbid','desk','.com'].join('');
 ```
 
-To change the address, edit those two lines on all four HTML pages. Links marked `data-mailto` become `mailto:` links. Forms marked `data-mailform` send through formsubmit.co to the same address.
+To change the address, edit those two lines on every HTML page. Links marked `data-mailto` become `mailto:` links. Forms marked `data-mailform` send through formsubmit.co to the same address.
 
 ## SEO pieces
 
@@ -31,6 +35,8 @@ To change the address, edit those two lines on all four HTML pages. Links marked
 - Structured data (JSON-LD, near the bottom of each page):
   - Homepage: `FAQPage` (must match the visible FAQ) and `ProfessionalService`
   - Articles/guides: `Article`; the tender guide also has `FAQPage`
+  - Service pages: `Service` and `FAQPage`
+  - The homepage `ProfessionalService` block names JoAnne Gomez as founder
 - `sitemap.xml` lists every page. Update `lastmod` when a page changes, and add new pages to it.
 - `robots.txt` allows everything and points to the sitemap.
 
@@ -45,8 +51,15 @@ The hero photo is served as WebP (`hero-photo.webp`, `hero-photo-sm.webp`) insid
 3. Add a card for it in the homepage `#news` section.
 4. Add it to `sitemap.xml`.
 
+## Founder photo
+
+In the homepage About section, find the comment marked `PHOTO:`. Upload the photo as `joanne-gomez.jpg` and replace the `JG` text inside `<figure class="founder-photo">` with the `<img>` tag shown in that comment.
+
+## Package prices
+
+Each package on the service pages shows "Fixed fee, quoted in writing". To show a price, edit the `pack-fee` line for that package.
+
 ## Things that update themselves
 
-- The deadline countdown on the homepage switches to "now in effect" after 18 September 2026 (JavaScript).
 - The footer year.
 - Procurement Watch shows the `OPPORTUNITIES` list in the homepage script; empty shows the "where to look" panel.
